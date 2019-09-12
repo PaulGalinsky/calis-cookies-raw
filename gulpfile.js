@@ -19,9 +19,16 @@ gulp.task('sass', function(done){
 	done();
 });
 
-gulp.task('default', gulp.series('copyHtml', 'sass'));
+gulp.task('rawImage', function(done){
+	gulp.src('src/img/*')
+		.pipe(gulp.dest('dist/img'));
+	done();
+});
+
+gulp.task('default', gulp.series('copyHtml', 'sass', 'rawImage'));
 
 gulp.task('watch', function(){
 	gulp.watch('src/*.html', gulp.series('copyHtml'));
 	gulp.watch('src/sass/*.scss', gulp.series('sass'));
+	gulp.watch('src/img/*', gulp.series('rawImage'));
 });
