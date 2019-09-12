@@ -1,5 +1,18 @@
-$bgColor: #888;
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #000;
+	font-family: 'Reem Kufi', sans-serif;
+}
 
-body {
-	background: $bgColor;
+footer {
+	.map {
+		width: 25%;
+		img {
+			overflow: hidden;
+			max-width: 100%;
+			height: auto;
+		}
+	}
 }

@@ -1,2 +1,13 @@
-body {
-  background: #888; }
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Reem Kufi', sans-serif; }
+
+footer .map {
+  width: 25%; }
+  footer .map img {
+    overflow: hidden;
+    max-width: 100%;
+    height: auto; }
