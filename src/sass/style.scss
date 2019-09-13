@@ -13,6 +13,8 @@ body, html {
 	text-decoration: none;
 	color: $dark;
 	font-family: 'Reem Kufi', sans-serif;
+	font-weight: 100;
+	box-sizing: border-box;
 }
 
 header {
@@ -21,36 +23,57 @@ header {
 	position: absolute;
 	top: 0;
 	left: 0;
-		nav {
-			position: absolute;
-			right: 0;
-			top: 0;
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 1rem;
-				li {
-					color: $brand;
-					display: inline;
-					margin: 0 1rem;
-					&:hover{
-						border-bottom: 0.2rem solid $brand;
-					}
+
+	div.logo {
+		width: 8rem;
+		margin: 1rem;
+		img {
+			opacity: 1;
+			transition: all 0.3s;
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+
+	nav {
+		position: absolute;
+		padding-top: 1rem;
+		right: 0;
+		top: 0;
+		a {
+			margin: 1rem;
+			color: $brand;
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			transition: all 0.3s;
+			&:hover.nav-about, &:hover.nav-recipies {
+				border-bottom: 0.15rem solid $brand;
+			}
+			&.nav-shop {
+				border: 0.15rem solid $brand;
+				border-radius: 0.25rem;
+				padding: 0.5rem 1rem;
+				&:hover {
+					background-color: $brand;
+					color: $white;
 				}
 			}
 		}
+	}
 }
 
 .hero {
 		background-image: url("../img/header_home.jpg");
-		height: 100vh;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		box-shadow: inset 0rem 0rem 10vh 10vh rgba(0,0,0,0.75);
+		height: 100vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		.text h2 {
+		.text h1 {
 			color: $white;
 			font-size: 3rem;
 			text-transform: uppercase;

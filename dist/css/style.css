@@ -6,7 +6,9 @@ body, html {
   padding: 0;
   text-decoration: none;
   color: #616161;
-  font-family: 'Reem Kufi', sans-serif; }
+  font-family: 'Reem Kufi', sans-serif;
+  font-weight: 100;
+  box-sizing: border-box; }
 
 header {
   width: 100%;
@@ -14,31 +16,46 @@ header {
   position: absolute;
   top: 0;
   left: 0; }
+  header div.logo {
+    width: 8rem;
+    margin: 1rem; }
+    header div.logo img {
+      opacity: 1;
+      transition: all 0.3s; }
+      header div.logo img:hover {
+        opacity: .8; }
   header nav {
     position: absolute;
+    padding-top: 1rem;
     right: 0;
     top: 0; }
-    header nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 1rem; }
-      header nav ul li {
-        color: #F1C195;
-        display: inline;
-        margin: 0 1rem; }
-        header nav ul li:hover {
-          border-bottom: 0.2rem solid #F1C195; }
+    header nav a {
+      margin: 1rem;
+      color: #F1C195;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      transition: all 0.3s; }
+      header nav a:hover.nav-about, header nav a:hover.nav-recipies {
+        border-bottom: 0.15rem solid #F1C195; }
+      header nav a.nav-shop {
+        border: 0.15rem solid #F1C195;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem; }
+        header nav a.nav-shop:hover {
+          background-color: #F1C195;
+          color: #ffffff; }
 
 .hero {
   background-image: url("../img/header_home.jpg");
-  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: inset 0rem 0rem 10vh 10vh rgba(0, 0, 0, 0.75);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center; }
-  .hero .text h2 {
+  .hero .text h1 {
     color: #ffffff;
     font-size: 3rem;
     text-transform: uppercase;
