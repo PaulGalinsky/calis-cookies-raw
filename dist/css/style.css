@@ -18,12 +18,14 @@ header {
   left: 0; }
   header div.logo {
     width: 8rem;
-    margin: 1rem; }
+    margin: 1rem 3vw; }
     header div.logo img {
       opacity: 1;
-      transition: all 0.3s; }
+      transition: all 0.3s;
+      transform: rotate(-7deg); }
       header div.logo img:hover {
-        opacity: .8; }
+        transform: scale(1.05, 1.05);
+        transform: rotate(353deg); }
   header nav {
     position: absolute;
     padding-top: 1rem;

@@ -26,12 +26,14 @@ header {
 
 	div.logo {
 		width: 8rem;
-		margin: 1rem;
+		margin: 1rem 3vw;
 		img {
 			opacity: 1;
 			transition: all 0.3s;
+			transform: rotate(-7deg);
 			&:hover {
-				opacity: .8;
+				transform: scale(1.05, 1.05);
+				transform: rotate(353deg);
 			}
 		}
 	}
