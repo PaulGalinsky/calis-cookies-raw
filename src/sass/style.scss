@@ -17,6 +17,10 @@ body, html {
 	box-sizing: border-box;
 }
 
+ul {
+	list-style: none;
+}
+
 .container {
 	width: 80%;
 	margin: 0	 auto;
@@ -102,6 +106,25 @@ footer {
 		display: grid;
 		grid-template-columns: 50% 50%;
 			.details {
+				.contact-details {
+					margin-bottom: 1rem;
+					li:nth-child(2){
+						margin-bottom: 1rem;
+					}
+				}
+				.social-media-links {
+					margin-top: 0.5rem;
+					li {
+						margin-right: 0.5rem;
+						display: inline;
+						a {
+							&:hover {
+								filter: grayscale(100%);
+							}
+						}
+
+					}
+				}
 
 			}
 			.map {

@@ -10,6 +10,9 @@ body, html {
   font-weight: 100;
   box-sizing: border-box; }
 
+ul {
+  list-style: none; }
+
 .container {
   width: 80%;
   margin: 0	 auto; }
@@ -78,6 +81,17 @@ footer {
   footer .container {
     display: grid;
     grid-template-columns: 50% 50%; }
+    footer .container .details .contact-details {
+      margin-bottom: 1rem; }
+      footer .container .details .contact-details li:nth-child(2) {
+        margin-bottom: 1rem; }
+    footer .container .details .social-media-links {
+      margin-top: 0.5rem; }
+      footer .container .details .social-media-links li {
+        margin-right: 0.5rem;
+        display: inline; }
+        footer .container .details .social-media-links li a:hover {
+          filter: grayscale(100%); }
     footer .container .map {
       display: grid; }
       footer .container .map .map-image {
