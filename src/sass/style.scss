@@ -19,6 +19,42 @@ body, html {
 
 ul {
 	list-style: none;
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 3rem;
+	margin: 2rem 0;
+	text-align: center;
+}
+
+img {
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	color: $brand;
+	border: 0.15rem solid $brand;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	padding: 0.5rem 2rem;
+	text-transform: uppercase;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: $brand;
+		color: $white;
+	}
+	&.call-to-action {
+		margin: 4rem auto;
+		display: block;
+	}
 }
 
 .container {
@@ -35,7 +71,7 @@ header {
 
 	div.logo {
 		width: 8rem;
-		margin: 1rem 3vw;
+		margin: 2rem 3vw;
 		img {
 			opacity: 1;
 			transition: all 0.3s;
@@ -49,13 +85,13 @@ header {
 
 	nav {
 		position: absolute;
-		padding-top: 1rem;
+		padding: 2rem 1rem 0 0;
 		right: 0;
 		top: 0;
 		a {
 			margin: 1rem;
 			color: $brand;
-			font-size: 0.8rem;
+			font-size: 1rem;
 			text-transform: uppercase;
 			transition: all 0.3s;
 			&:hover.nav-about, &:hover.nav-recipies {
@@ -63,7 +99,7 @@ header {
 			}
 			&.nav-shop {
 				border: 0.15rem solid $brand;
-				border-radius: 0.25rem;
+				border-radius: 0.5rem;
 				padding: 0.5rem 1rem;
 				&:hover {
 					background-color: $brand;
@@ -86,21 +122,66 @@ header {
 		justify-content: center;
 		.text h1 {
 			color: $white;
-			font-size: 3rem;
+			font-size: 4rem;
 			text-transform: uppercase;
 			text-align: center;
 		}
 		.text p {
 			color:$white;
-			font-size: 1.5rem;
+			font-size: 2rem;
 			text-align: center;
 		}
+}
+
+
+
+.card-three {
+	display: grid;
+	align-items: start;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 4rem 4rem;
+
+}
+
+
+.baking {
+	margin: 6rem 0;
+	.card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		.image {
+			grid-column: 1/3;
+			margin-bottom: 0.5rem;
+			img {
+				transition: all 0.3s;
+				&:hover {
+					border-radius: 1rem;
+					transform: scale(1.05);
+				}
+			}
+		}
+		p a {
+			transition: all 0.3s;
+			&:hover{
+				color: #F1C195;
+			}
+		}
+
+		button {
+			display: block;
+			font-size: 0.8rem;
+			padding: 0 0.5rem;
+			margin: 0.5rem 0;
+			justify-self: end;
+			align-self: start;
+		}
+	}
 }
 
 footer {
 	width: 100%;
 	border-top: 0.5rem solid $brand;
-	padding: 2rem 0;
+	padding: 4rem 0;
 
 	.container {
 		display: grid;
@@ -132,11 +213,7 @@ footer {
 				.map-image {
 					justify-self: end;
 					width: 50%;
-					img {
-						overflow: hidden;
-						max-width: 100%;
-						height: auto;
-					}
+
 				}
 			}
 	}
