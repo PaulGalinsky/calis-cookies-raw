@@ -101,19 +101,19 @@ header {
   display: grid;
   align-items: start;
   grid-template-columns: 1fr;
-  grid-gap: 4rem 4rem; }
+  gap: 4rem 4rem; }
 
 .card-three {
   display: grid;
   align-items: start;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem 4rem; }
+  gap: 4rem 4rem; }
 
 .card-four {
   display: grid;
   align-items: start;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 4rem 4rem; }
+  gap: 3rem 3rem; }
 
 .hero {
   background-image: url("../img/header_home.jpg");
@@ -149,6 +149,9 @@ header {
       transform: scale(1.01); }
     .baking .card:hover p a {
       color: #F1C195; }
+    .baking .card:hover button {
+      color: #ffffff;
+      background-color: #F1C195; }
 
 .about-us {
   padding: 6rem 0;
@@ -175,12 +178,17 @@ header {
   padding: 6rem;
   background: url(../img/background-our-recipies.jpg) no-repeat;
   background-size: cover; }
+  .our-recipies .card p {
+    margin-bottom: 0; }
   .our-recipies .card img, .our-recipies .card p a {
     transition: all 0.3s; }
   .our-recipies .card:hover img {
     transform: scale(1.01); }
   .our-recipies .card:hover p a {
     color: #F1C195; }
+  .our-recipies .card:hover button {
+    color: #ffffff;
+    background-color: #F1C195; }
 
 footer {
   width: 100%;
@@ -198,10 +206,21 @@ footer {
       footer .container .details .social-media-links li {
         margin-right: 0.5rem;
         display: inline; }
+        footer .container .details .social-media-links li a img {
+          transition: all 0.3s; }
         footer .container .details .social-media-links li a:hover {
           filter: grayscale(100%); }
+          footer .container .details .social-media-links li a:hover img {
+            transform: scale(1.05, 1.05);
+            transform: rotate(360deg); }
     footer .container .map {
       display: grid; }
       footer .container .map .map-image {
         justify-self: end;
         width: 50%; }
+        footer .container .map .map-image img {
+          transition: all 0.3s;
+          border: 0.25rem solid transparent; }
+          footer .container .map .map-image img:hover {
+            border: 0.25rem solid #F1C195;
+            border-radius: 0.5rem; }

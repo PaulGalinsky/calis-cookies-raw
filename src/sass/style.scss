@@ -129,21 +129,21 @@ header {
 	display: grid;
 	align-items: start;
 	grid-template-columns: 1fr;
-	grid-gap: 4rem 4rem;
+	gap: 4rem 4rem;
 }
 
 .card-three {
 	display: grid;
 	align-items: start;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 4rem 4rem;
+	gap: 4rem 4rem;
 }
 
 .card-four {
 	display: grid;
 	align-items: start;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 4rem 4rem;
+	gap: 3rem 3rem;
 }
 
 .hero {
@@ -188,6 +188,10 @@ header {
 			p a {
 				color: #F1C195;
 			}
+			button {
+				color: $white;
+				background-color: $brand;
+			}
 		}
 	}
 }
@@ -225,6 +229,9 @@ header {
 	background: url(../img/background-our-recipies.jpg) no-repeat;
 	background-size: cover;
 	.card {
+		p {
+			margin-bottom: 0;
+		}
 		img, p a {
 			transition: all 0.3s;
 		}
@@ -234,6 +241,10 @@ header {
 			}
 			p a {
 				color: #F1C195;
+			}
+			button {
+				color: $white;
+				background-color: $brand;
 			}
 		}
 	}
@@ -261,8 +272,15 @@ footer {
 						margin-right: 0.5rem;
 						display: inline;
 						a {
+							img {
+								transition: all 0.3s;
+							}
 							&:hover {
 								filter: grayscale(100%);
+								img {
+									transform: scale(1.05, 1.05);
+									transform: rotate(360deg);
+								}
 							}
 						}
 
@@ -275,7 +293,14 @@ footer {
 				.map-image {
 					justify-self: end;
 					width: 50%;
-
+					img {
+						transition: all 0.3s;
+						border: 0.25rem solid transparent;
+						&:hover {
+							border: 0.25rem solid $brand;
+							border-radius: 0.5rem;
+						}
+					}
 				}
 			}
 	}
