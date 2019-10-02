@@ -15,7 +15,11 @@ ul {
   font-size: 1.5rem; }
 
 p {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
+  p.section-intro {
+    text-align: center;
+    margin-bottom: 4rem; }
 
 h2 {
   font-size: 3rem;
@@ -28,6 +32,7 @@ img {
   height: auto; }
 
 button {
+  background-color: transparent;
   color: #F1C195;
   border: 0.15rem solid #F1C195;
   border-radius: 0.5rem;
@@ -41,6 +46,14 @@ button {
   button.call-to-action {
     margin: 4rem auto;
     display: block; }
+
+.button-mini {
+  display: block;
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+  margin: 0.5rem 0;
+  justify-self: end;
+  align-self: start; }
 
 .container {
   width: 80%;
@@ -84,6 +97,24 @@ header {
           background-color: #F1C195;
           color: #ffffff; }
 
+.card-one {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  grid-gap: 4rem 4rem; }
+
+.card-three {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem 4rem; }
+
+.card-four {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4rem 4rem; }
+
 .hero {
   background-image: url("../img/header_home.jpg");
   background-position: center;
@@ -104,18 +135,6 @@ header {
     font-size: 2rem;
     text-align: center; }
 
-.card-one {
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr;
-  grid-gap: 4rem 4rem; }
-
-.card-three {
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem 4rem; }
-
 .baking {
   margin: 6rem 0; }
   .baking .card {
@@ -124,13 +143,6 @@ header {
     .baking .card .image {
       grid-column: 1/3;
       margin-bottom: 0.5rem; }
-    .baking .card button {
-      display: block;
-      font-size: 0.8rem;
-      padding: 0 0.5rem;
-      margin: 0.5rem 0;
-      justify-self: end;
-      align-self: start; }
     .baking .card img, .baking .card p a {
       transition: all 0.3s; }
     .baking .card:hover img {
@@ -158,6 +170,17 @@ header {
       .about-us .card:nth-child(even) p {
         order: 1;
         text-align: left; }
+
+.our-recipies {
+  padding: 6rem;
+  background: url(../img/background-our-recipies.jpg) no-repeat;
+  background-size: cover; }
+  .our-recipies .card img, .our-recipies .card p a {
+    transition: all 0.3s; }
+  .our-recipies .card:hover img {
+    transform: scale(1.01); }
+  .our-recipies .card:hover p a {
+    color: #F1C195; }
 
 footer {
   width: 100%;

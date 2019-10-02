@@ -24,6 +24,11 @@ ul {
 
 p {
 	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	&.section-intro {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
 }
 
 h2 {
@@ -39,6 +44,7 @@ img {
 }
 
 button {
+	background-color: transparent;
 	color: $brand;
 	border: 0.15rem solid $brand;
 	border-radius: 0.5rem;
@@ -46,7 +52,6 @@ button {
 	padding: 0.5rem 2rem;
 	text-transform: uppercase;
 	transition: all 0.3s;
-
 	&:hover {
 		background-color: $brand;
 		color: $white;
@@ -56,6 +61,15 @@ button {
 		display: block;
 	}
 }
+.button-mini {
+	display: block;
+	font-size: 0.8rem;
+	padding: 0 0.5rem;
+	margin: 0.5rem 0;
+	justify-self: end;
+	align-self: start;
+}
+
 
 .container {
 	width: 80%;
@@ -111,30 +125,6 @@ header {
 	}
 }
 
-.hero {
-		background-image: url("../img/header_home.jpg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		box-shadow: inset 0rem 0rem 10vh 10vh rgba(0,0,0,0.75);
-		height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		.text h1 {
-			color: $white;
-			font-size: 4rem;
-			text-transform: uppercase;
-			text-align: center;
-		}
-		.text p {
-			color:$white;
-			font-size: 2rem;
-			text-align: center;
-		}
-}
-
-
 .card-one {
 	display: grid;
 	align-items: start;
@@ -149,6 +139,36 @@ header {
 	grid-gap: 4rem 4rem;
 }
 
+.card-four {
+	display: grid;
+	align-items: start;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 4rem 4rem;
+}
+
+.hero {
+	background-image: url("../img/header_home.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: inset 0rem 0rem 10vh 10vh rgba(0,0,0,0.75);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.text h1 {
+		color: $white;
+		font-size: 4rem;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.text p {
+		color:$white;
+		font-size: 2rem;
+		text-align: center;
+	}
+}
+
 .baking {
 	margin: 6rem 0;
 	.card {
@@ -157,14 +177,6 @@ header {
 		.image {
 			grid-column: 1/3;
 			margin-bottom: 0.5rem;
-		}
-		button {
-			display: block;
-			font-size: 0.8rem;
-			padding: 0 0.5rem;
-			margin: 0.5rem 0;
-			justify-self: end;
-			align-self: start;
 		}
 		img, p a {
 			transition: all 0.3s;
@@ -203,6 +215,25 @@ header {
 			p {
 				order: 1;
 				text-align: left;
+			}
+		}
+	}
+}
+
+.our-recipies {
+	padding: 6rem;
+	background: url(../img/background-our-recipies.jpg) no-repeat;
+	background-size: cover;
+	.card {
+		img, p a {
+			transition: all 0.3s;
+		}
+		&:hover{
+			img {
+				transform: scale(1.01);
+			}
+			p a {
+				color: #F1C195;
 			}
 		}
 	}
