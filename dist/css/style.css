@@ -44,6 +44,7 @@ button {
 
 .container {
   width: 80%;
+  max-width: 1060px;
   margin: 0	 auto; }
 
 header {
@@ -103,6 +104,12 @@ header {
     font-size: 2rem;
     text-align: center; }
 
+.card-one {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  grid-gap: 4rem 4rem; }
+
 .card-three {
   display: grid;
   align-items: start;
@@ -130,6 +137,27 @@ header {
       transform: scale(1.01); }
     .baking .card:hover p a {
       color: #F1C195; }
+
+.about-us {
+  padding: 6rem 0;
+  background-color: #fcfcfc; }
+  .about-us .card {
+    align-items: center;
+    column-gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    margin-bottom: 2rem; }
+    .about-us .card p {
+      text-align: right; }
+    .about-us .card .image {
+      justify-self: center; }
+    .about-us .card:nth-child(even) {
+      grid-template-columns: 2.5fr 1fr; }
+      .about-us .card:nth-child(even) .image {
+        order: 2; }
+      .about-us .card:nth-child(even) p {
+        order: 1;
+        text-align: left; }
 
 footer {
   width: 100%;
