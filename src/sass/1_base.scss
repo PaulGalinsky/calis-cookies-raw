@@ -1,0 +1,31 @@
+// colors
+$dark: #616161;
+$white: #ffffff;
+$brand: #F1C195;
+
+// breakpoints:
+$break-0: 	0px;
+$break-s: 	600px;
+$break-m: 	900px;
+$break-l: 	1200px;
+$break-xl: 	1600px;
+
+// @include breakpoint( $break-s ) { css here }
+@mixin breakpoint( $point ) {
+	@media only screen and ( min-width: $point ) { @content; }
+}
+
+
+body, html {
+	height: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: $dark;
+	font-family: 'Reem Kufi', sans-serif;
+	font-weight: 100;
+	box-sizing: border-box;
+}

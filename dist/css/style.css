@@ -224,3 +224,7 @@ footer {
           footer .container .map .map-image img:hover {
             border: 0.25rem solid #F1C195;
             border-radius: 0.5rem; }
+
+@media only screen and (min-width: 1200px) {
+  footer {
+    background-color: #F1C195; } }
