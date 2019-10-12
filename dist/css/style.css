@@ -10,6 +10,65 @@ body, html {
   font-weight: 100;
   box-sizing: border-box; }
 
+.grid-card {
+  display: grid;
+  align-items: start; }
+
+@media only screen and (min-width: 300px) {
+  .xs-card-one {
+    grid-template-columns: 1fr;
+    gap: 1rem 0rem; }
+  .xs-card-two {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1rem; }
+  .xs-card-three {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem 1rem; } }
+
+@media only screen and (min-width: 600px) {
+  .s-card-one {
+    grid-template-columns: 1fr;
+    gap: 2rem 0rem; }
+  .s-card-two {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 2rem; }
+  .s-card-three {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem 2rem; } }
+
+@media only screen and (min-width: 900px) {
+  .m-card-one {
+    grid-template-columns: 1fr;
+    gap: 4rem 0rem; }
+  .m-card-two {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 4rem; }
+  .m-card-three {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem 4rem; } }
+
+@media only screen and (min-width: 1200px) {
+  .l-card-one {
+    grid-template-columns: 1fr;
+    gap: 4rem 0rem; }
+  .l-card-two {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem 6rem; }
+  .l-card-three {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem 6rem; } }
+
+@media only screen and (min-width: 1600px) {
+  .xl-card-one {
+    grid-template-columns: 1fr;
+    gap: 4rem 0rem; }
+  .xl-card-two {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem 8rem; }
+  .xl-card-three {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8rem 8rem; } }
+
 ul {
   list-style: none;
   font-size: 1.5rem; }
@@ -103,12 +162,6 @@ header {
   grid-template-columns: 1fr;
   gap: 4rem 4rem; }
 
-.card-three {
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 4rem 4rem; }
-
 .card-four {
   display: grid;
   align-items: start;
@@ -139,9 +192,9 @@ header {
   margin: 6rem 0; }
   .baking .card {
     display: grid;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr 2fr;
+    gap: 0rem 1rem; }
     .baking .card .image {
-      grid-column: 1/3;
       margin-bottom: 0.5rem; }
     .baking .card img, .baking .card p a {
       transition: all 0.3s; }
@@ -224,6 +277,14 @@ footer {
           footer .container .map .map-image img:hover {
             border: 0.25rem solid #F1C195;
             border-radius: 0.5rem; }
+
+@media only screen and (min-width: 900px) {
+  .baking .card {
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem 1rem; }
+    .baking .card .image {
+      grid-column: 1/3;
+      margin-bottom: 0.5rem; } }
 
 @media only screen and (min-width: 1200px) {
   footer {

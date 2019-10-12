@@ -114,12 +114,7 @@ header {
 	gap: 4rem 4rem;
 }
 
-.card-three {
-	display: grid;
-	align-items: start;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 4rem 4rem;
-}
+
 
 .card-four {
 	display: grid;
@@ -127,6 +122,8 @@ header {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 3rem 3rem;
 }
+
+
 
 .hero {
 	background-image: url("../img/header_home.jpg");
@@ -155,9 +152,9 @@ header {
 	margin: 6rem 0;
 	.card {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 2fr;
+		gap: 0rem 1rem;
 		.image {
-			grid-column: 1/3;
 			margin-bottom: 0.5rem;
 		}
 		img, p a {
@@ -177,6 +174,7 @@ header {
 		}
 	}
 }
+
 
 .about-us {
 	padding: 6rem 0;
@@ -205,6 +203,7 @@ header {
 		}
 	}
 }
+
 
 .our-recipies {
 	padding: 6rem;
@@ -288,8 +287,21 @@ footer {
 	}
 }
 
-@include breakpoint( $break-l ) {
-		footer {
-			background-color: $brand;
+@include breakpoint( $break-m ) {
+	.baking {
+		.card {
+			grid-template-columns: 1fr 1fr;
+			gap: 0rem 1rem;
+			.image {
+				grid-column: 1/3;
+				margin-bottom: 0.5rem;
+			}
 		}
- }
+	}
+}
+
+@include breakpoint( $break-l ) {
+	footer {
+		background-color: $brand;
+	}
+}

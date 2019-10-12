@@ -4,7 +4,7 @@ $white: #ffffff;
 $brand: #F1C195;
 
 // breakpoints:
-$break-0: 	0px;
+$break-xs: 	300px;
 $break-s: 	600px;
 $break-m: 	900px;
 $break-l: 	1200px;
@@ -29,3 +29,85 @@ body, html {
 	font-weight: 100;
 	box-sizing: border-box;
 }
+
+.grid-card {
+	display: grid;
+	align-items: start;
+}
+
+@include breakpoint( $break-xs ) {
+	.xs-card-one {
+		grid-template-columns: 1fr;
+		gap: 1rem 0rem;
+	}
+	.xs-card-two {
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem 1rem;
+	}
+	.xs-card-three {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem 1rem;
+	}
+}
+
+@include breakpoint( $break-s ) {
+	.s-card-one {
+		grid-template-columns: 1fr;
+		gap: 2rem 0rem;
+	}
+	.s-card-two {
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem 2rem;
+	}
+	.s-card-three {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 2rem 2rem;
+	}
+}
+
+@include breakpoint( $break-m ) {
+	.m-card-one {
+		grid-template-columns: 1fr;
+		gap: 4rem 0rem;
+	}
+	.m-card-two {
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem 4rem;
+	}
+	.m-card-three {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 4rem 4rem;
+	}
+}
+
+@include breakpoint( $break-l ) {
+	.l-card-one {
+		grid-template-columns: 1fr;
+		gap: 4rem 0rem;
+	}
+	.l-card-two {
+		grid-template-columns: 1fr 1fr;
+		gap: 6rem 6rem;
+	}
+	.l-card-three {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 6rem 6rem;
+	}
+}
+
+@include breakpoint( $break-xl ) {
+	.xl-card-one {
+		grid-template-columns: 1fr;
+		gap: 4rem 0rem;
+	}
+	.xl-card-two {
+		grid-template-columns: 1fr 1fr;
+		gap: 8rem 8rem;
+	}
+	.xl-card-three {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 8rem 8rem;
+	}
+}
+
+
