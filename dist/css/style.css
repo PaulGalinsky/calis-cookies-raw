@@ -17,7 +17,7 @@ body, html {
 @media only screen and (min-width: 300px) {
   .xs-card-one {
     grid-template-columns: 1fr;
-    gap: 1rem 0rem; }
+    gap: 2rem 0rem; }
   .xs-card-two {
     grid-template-columns: 1fr 1fr;
     gap: 1rem 1rem; }
@@ -192,15 +192,22 @@ header {
   margin: 6rem 0; }
   .baking .card {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     gap: 0rem 1rem; }
     .baking .card .image {
       margin-bottom: 0.5rem; }
-    .baking .card img, .baking .card p a {
+    .baking .card p.description {
+      font-size: 1rem; }
+    .baking .card img, .baking .card h3 a {
       transition: all 0.3s; }
+    .baking .card h3 {
+      margin-bottom: 0.5rem;
+      text-align: left;
+      font-size: 1.5rem;
+      line-height: 1.5rem; }
     .baking .card:hover img {
       transform: scale(1.01); }
-    .baking .card:hover p a {
+    .baking .card:hover h3 a {
       color: #F1C195; }
     .baking .card:hover button {
       color: #ffffff;
@@ -278,13 +285,26 @@ footer {
             border: 0.25rem solid #F1C195;
             border-radius: 0.5rem; }
 
+@media only screen and (min-width: 600px) {
+  .baking .card h3 {
+    line-height: 2rem; } }
+
 @media only screen and (min-width: 900px) {
   .baking .card {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0rem 1rem; }
     .baking .card .image {
-      grid-column: 1/3;
-      margin-bottom: 0.5rem; } }
+      margin-bottom: 0.5rem; }
+    .baking .card .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0rem 1rem; }
+      .baking .card .details p {
+        display: none; }
+      .baking .card .details .button-mini {
+        justify-self: end; }
+    .baking .card:last-child {
+      display: none; } }
 
 @media only screen and (min-width: 1200px) {
   footer {

@@ -152,19 +152,28 @@ header {
 	margin: 6rem 0;
 	.card {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 2fr 3fr;
 		gap: 0rem 1rem;
 		.image {
 			margin-bottom: 0.5rem;
 		}
-		img, p a {
+		p.description {
+			font-size: 1rem;
+		}
+		img, h3 a {
 			transition: all 0.3s;
+		}
+		h3 {
+			margin-bottom: 0.5rem;
+			text-align: left;
+			font-size: 1.5rem;
+			line-height: 1.5rem;
 		}
 		&:hover{
 			img {
 				transform: scale(1.01);
 			}
-			p a {
+			h3 a {
 				color: #F1C195;
 			}
 			button {
@@ -287,14 +296,37 @@ footer {
 	}
 }
 
+@include breakpoint( $break-s ) {
+	.baking {
+		.card {
+			h3 {
+				line-height: 2rem;
+			}
+		}
+	}
+}
+
 @include breakpoint( $break-m ) {
 	.baking {
 		.card {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr;
 			gap: 0rem 1rem;
 			.image {
-				grid-column: 1/3;
 				margin-bottom: 0.5rem;
+			}
+			.details {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 0rem 1rem;
+				p {
+					display: none;
+				}
+				.button-mini {
+					justify-self: end;
+				}
+			}
+			&:last-child {
+				display: none;
 			}
 		}
 	}
