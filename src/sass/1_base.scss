@@ -4,7 +4,7 @@ $white: #ffffff;
 $brand: #F1C195;
 
 // breakpoints:
-$break-xs: 	300px;
+$break-xs: 	320px;
 $break-s: 	600px;
 $break-m: 	900px;
 $break-l: 	1200px;
@@ -14,7 +14,6 @@ $break-xl: 	1600px;
 @mixin breakpoint( $point ) {
 	@media only screen and ( min-width: $point ) { @content; }
 }
-
 
 body, html {
 	height: 100%;
@@ -30,10 +29,72 @@ body, html {
 	box-sizing: border-box;
 }
 
+ul {
+	list-style: none;
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	&.section-intro {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin: 2rem 0;
+	text-align: center;
+}
+
+img {
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	background-color: transparent;
+	color: $brand;
+	border: 0.15rem solid $brand;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	padding: 0.5rem 2rem;
+	text-transform: uppercase;
+	transition: all 0.3s;
+	&:hover {
+		background-color: $brand;
+		color: $white;
+	}
+	&.call-to-action {
+		margin: 4rem auto;
+		display: block;
+	}
+}
+.button-mini {
+	display: block;
+	font-size: 0.8rem;
+	padding: 0 0.5rem;
+	margin: 0.5rem 0;
+	justify-self: end;
+	align-self: start;
+}
+
+.container {
+	width: 80%;
+	max-width: 1060px;
+	margin: 0	 auto;
+}
+
 .grid-card {
 	display: grid;
 	align-items: start;
 }
+
+
+
 
 @include breakpoint( $break-xs ) {
 	.xs-card-one {

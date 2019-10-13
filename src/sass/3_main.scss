@@ -1,86 +1,3 @@
-
-ul {
-	list-style: none;
-	font-size: 1.5rem;
-}
-
-p {
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
-	&.section-intro {
-		text-align: center;
-		margin-bottom: 4rem;
-	}
-}
-
-h2 {
-	font-size: 3rem;
-	margin: 2rem 0;
-	text-align: center;
-}
-
-img {
-	overflow: hidden;
-	max-width: 100%;
-	height: auto;
-}
-
-button {
-	background-color: transparent;
-	color: $brand;
-	border: 0.15rem solid $brand;
-	border-radius: 0.5rem;
-	font-size: 1rem;
-	padding: 0.5rem 2rem;
-	text-transform: uppercase;
-	transition: all 0.3s;
-	&:hover {
-		background-color: $brand;
-		color: $white;
-	}
-	&.call-to-action {
-		margin: 4rem auto;
-		display: block;
-	}
-}
-.button-mini {
-	display: block;
-	font-size: 0.8rem;
-	padding: 0 0.5rem;
-	margin: 0.5rem 0;
-	justify-self: end;
-	align-self: start;
-}
-
-
-.container {
-	width: 80%;
-	max-width: 1060px;
-	margin: 0	 auto;
-}
-
-header {
-	width: 100%;
-	height: 2rem;
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	div.logo {
-		width: 8rem;
-		margin: 2rem 3vw;
-		img {
-			opacity: 1;
-			transition: all 0.3s;
-			transform: rotate(-7deg);
-			&:hover {
-				transform: scale(1.05, 1.05);
-				transform: rotate(353deg);
-			}
-		}
-	}
-}
-
 .card-one {
 	display: grid;
 	align-items: start;
@@ -111,13 +28,13 @@ header {
 	justify-content: center;
 	.text h1 {
 		color: $white;
-		font-size: 4rem;
+		font-size: 2.5rem;
 		text-transform: uppercase;
 		text-align: center;
 	}
 	.text p {
 		color:$white;
-		font-size: 2rem;
+		font-size: 1.3rem;
 		text-align: center;
 	}
 }
@@ -160,15 +77,16 @@ header {
 
 
 .about-us {
-	padding: 6rem 0;
+	padding: 4rem 0;
 	background-color: #fcfcfc;
 	.card {
 		align-items: center;
-		column-gap: 4rem;
 		display: grid;
 		grid-template-columns: 1fr 2.5fr;
-		margin-bottom: 2rem;
+		gap: 0rem 2rem;
+		margin-bottom: 1rem;
 		p {
+			font-size: 1rem;
 			text-align: right;
 		}
 		.image {
@@ -278,13 +196,37 @@ footer {
 			}
 		}
 	}
+
+	.about-us {
+		.card {
+			grid-template-columns: 1fr 2fr;
+			gap: 0rem 3rem;
+			margin-bottom: 3rem;
+			&:nth-child(even){
+				grid-template-columns: 2fr 1fr;
+			}
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
 }
 
 @include breakpoint( $break-m ) {
+	.hero {
+		.text h1 {
+			font-size: 4rem;
+		}
+		.text p {
+			font-size: 2rem;
+		}
+	}
+
 	.baking {
 		.card {
 			grid-template-columns: 1fr;
-			gap: 0rem 1rem;
+			gap: 0rem 4rem;
+			margin-bottom: 4rem;
 			.image {
 				margin-bottom: 0.5rem;
 			}
@@ -301,6 +243,21 @@ footer {
 			}
 			&:last-child {
 				display: none;
+			}
+		}
+	}
+
+	.about-us {
+		padding: 6rem 0;
+		.card {
+			grid-template-columns: 1fr 2.5fr;
+			gap: 0rem 4rem;
+			margin-bottom: 4rem;
+			&:nth-child(even){
+				grid-template-columns: 2.5fr 1fr;
+			}
+			p {
+				font-size: 1.5rem;
 			}
 		}
 	}

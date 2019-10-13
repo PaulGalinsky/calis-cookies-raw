@@ -10,11 +10,61 @@ body, html {
   font-weight: 100;
   box-sizing: border-box; }
 
+ul {
+  list-style: none;
+  font-size: 1.5rem; }
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem; }
+  p.section-intro {
+    text-align: center;
+    margin-bottom: 4rem; }
+
+h2 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  text-align: center; }
+
+img {
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+
+button {
+  background-color: transparent;
+  color: #F1C195;
+  border: 0.15rem solid #F1C195;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  transition: all 0.3s; }
+  button:hover {
+    background-color: #F1C195;
+    color: #ffffff; }
+  button.call-to-action {
+    margin: 4rem auto;
+    display: block; }
+
+.button-mini {
+  display: block;
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+  margin: 0.5rem 0;
+  justify-self: end;
+  align-self: start; }
+
+.container {
+  width: 80%;
+  max-width: 1060px;
+  margin: 0	 auto; }
+
 .grid-card {
   display: grid;
   align-items: start; }
 
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 320px) {
   .xs-card-one {
     grid-template-columns: 1fr;
     gap: 2rem 0rem; }
@@ -69,15 +119,32 @@ body, html {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8rem 8rem; } }
 
+header {
+  width: 100%;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  header div.logo {
+    width: 4rem;
+    margin: 1rem 2vw; }
+    header div.logo img {
+      opacity: 1;
+      transition: all 0.3s;
+      transform: rotate(-7deg); }
+      header div.logo img:hover {
+        transform: scale(1.05, 1.05);
+        transform: rotate(353deg); }
+
 nav {
   position: absolute;
   padding: 1rem 0.5rem 0 0;
   right: 0;
   top: 0; }
   nav a {
-    margin: 1rem;
+    margin: 0.5rem;
     color: #F1C195;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     transition: all 0.3s; }
     nav a:hover.nav-about, nav a:hover.nav-recipies {
@@ -91,76 +158,15 @@ nav {
         color: #ffffff; }
 
 @media only screen and (min-width: 900px) {
-  padding: 2rem 1rem 0 0;
-  a {
-    font-size: 1rem; } }
-
-ul {
-  list-style: none;
-  font-size: 1.5rem; }
-
-p {
-  font-size: 1.5rem;
-  margin-bottom: 1rem; }
-  p.section-intro {
-    text-align: center;
-    margin-bottom: 4rem; }
-
-h2 {
-  font-size: 3rem;
-  margin: 2rem 0;
-  text-align: center; }
-
-img {
-  overflow: hidden;
-  max-width: 100%;
-  height: auto; }
-
-button {
-  background-color: transparent;
-  color: #F1C195;
-  border: 0.15rem solid #F1C195;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  padding: 0.5rem 2rem;
-  text-transform: uppercase;
-  transition: all 0.3s; }
-  button:hover {
-    background-color: #F1C195;
-    color: #ffffff; }
-  button.call-to-action {
-    margin: 4rem auto;
-    display: block; }
-
-.button-mini {
-  display: block;
-  font-size: 0.8rem;
-  padding: 0 0.5rem;
-  margin: 0.5rem 0;
-  justify-self: end;
-  align-self: start; }
-
-.container {
-  width: 80%;
-  max-width: 1060px;
-  margin: 0	 auto; }
-
-header {
-  width: 100%;
-  height: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0; }
-  header div.logo {
+  h2 {
+    font-size: 3rem; }
+  div.logo {
     width: 8rem;
     margin: 2rem 3vw; }
-    header div.logo img {
-      opacity: 1;
-      transition: all 0.3s;
-      transform: rotate(-7deg); }
-      header div.logo img:hover {
-        transform: scale(1.05, 1.05);
-        transform: rotate(353deg); }
+  nav {
+    padding: 2rem 1rem 0 0; }
+    nav a {
+      font-size: 1rem; } }
 
 .card-one {
   display: grid;
@@ -186,12 +192,12 @@ header {
   justify-content: center; }
   .hero .text h1 {
     color: #ffffff;
-    font-size: 4rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center; }
   .hero .text p {
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: center; }
 
 .baking {
@@ -220,15 +226,16 @@ header {
       background-color: #F1C195; }
 
 .about-us {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background-color: #fcfcfc; }
   .about-us .card {
     align-items: center;
-    column-gap: 4rem;
     display: grid;
     grid-template-columns: 1fr 2.5fr;
-    margin-bottom: 2rem; }
+    gap: 0rem 2rem;
+    margin-bottom: 1rem; }
     .about-us .card p {
+      font-size: 1rem;
       text-align: right; }
     .about-us .card .image {
       justify-self: center; }
@@ -293,12 +300,25 @@ footer {
 
 @media only screen and (min-width: 600px) {
   .baking .card h3 {
-    line-height: 2rem; } }
+    line-height: 2rem; }
+  .about-us .card {
+    grid-template-columns: 1fr 2fr;
+    gap: 0rem 3rem;
+    margin-bottom: 3rem; }
+    .about-us .card:nth-child(even) {
+      grid-template-columns: 2fr 1fr; }
+    .about-us .card p {
+      font-size: 1.2rem; } }
 
 @media only screen and (min-width: 900px) {
+  .hero .text h1 {
+    font-size: 4rem; }
+  .hero .text p {
+    font-size: 2rem; }
   .baking .card {
     grid-template-columns: 1fr;
-    gap: 0rem 1rem; }
+    gap: 0rem 4rem;
+    margin-bottom: 4rem; }
     .baking .card .image {
       margin-bottom: 0.5rem; }
     .baking .card .details {
@@ -310,7 +330,17 @@ footer {
       .baking .card .details .button-mini {
         justify-self: end; }
     .baking .card:last-child {
-      display: none; } }
+      display: none; }
+  .about-us {
+    padding: 6rem 0; }
+    .about-us .card {
+      grid-template-columns: 1fr 2.5fr;
+      gap: 0rem 4rem;
+      margin-bottom: 4rem; }
+      .about-us .card:nth-child(even) {
+        grid-template-columns: 2.5fr 1fr; }
+      .about-us .card p {
+        font-size: 1.5rem; } }
 
 @media only screen and (min-width: 1200px) {
   footer {
