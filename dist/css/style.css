@@ -69,6 +69,32 @@ body, html {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8rem 8rem; } }
 
+nav {
+  position: absolute;
+  padding: 1rem 0.5rem 0 0;
+  right: 0;
+  top: 0; }
+  nav a {
+    margin: 1rem;
+    color: #F1C195;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    transition: all 0.3s; }
+    nav a:hover.nav-about, nav a:hover.nav-recipies {
+      border-bottom: 0.15rem solid #F1C195; }
+    nav a.nav-shop {
+      border: 0.15rem solid #F1C195;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem; }
+      nav a.nav-shop:hover {
+        background-color: #F1C195;
+        color: #ffffff; }
+
+@media only screen and (min-width: 900px) {
+  padding: 2rem 1rem 0 0;
+  a {
+    font-size: 1rem; } }
+
 ul {
   list-style: none;
   font-size: 1.5rem; }
@@ -135,26 +161,6 @@ header {
       header div.logo img:hover {
         transform: scale(1.05, 1.05);
         transform: rotate(353deg); }
-  header nav {
-    position: absolute;
-    padding: 2rem 1rem 0 0;
-    right: 0;
-    top: 0; }
-    header nav a {
-      margin: 1rem;
-      color: #F1C195;
-      font-size: 1rem;
-      text-transform: uppercase;
-      transition: all 0.3s; }
-      header nav a:hover.nav-about, header nav a:hover.nav-recipies {
-        border-bottom: 0.15rem solid #F1C195; }
-      header nav a.nav-shop {
-        border: 0.15rem solid #F1C195;
-        border-radius: 0.5rem;
-        padding: 0.5rem 1rem; }
-        header nav a.nav-shop:hover {
-          background-color: #F1C195;
-          color: #ffffff; }
 
 .card-one {
   display: grid;

@@ -79,32 +79,6 @@ header {
 			}
 		}
 	}
-
-	nav {
-		position: absolute;
-		padding: 2rem 1rem 0 0;
-		right: 0;
-		top: 0;
-		a {
-			margin: 1rem;
-			color: $brand;
-			font-size: 1rem;
-			text-transform: uppercase;
-			transition: all 0.3s;
-			&:hover.nav-about, &:hover.nav-recipies {
-				border-bottom: 0.15rem solid $brand;
-			}
-			&.nav-shop {
-				border: 0.15rem solid $brand;
-				border-radius: 0.5rem;
-				padding: 0.5rem 1rem;
-				&:hover {
-					background-color: $brand;
-					color: $white;
-				}
-			}
-		}
-	}
 }
 
 .card-one {
