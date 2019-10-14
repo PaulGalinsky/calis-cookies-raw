@@ -47,10 +47,79 @@ nav {
 }
 
 
-@include breakpoint( $break-m ) {
-	h2 {
-		font-size: 3rem;
+footer {
+	width: 100%;
+	border-top: 0.5rem solid $brand;
+	padding: 4rem 0;
+
+	.container {
+		display: grid;
+		grid-template-columns: 100%;
+			.details {
+				.contact-details {
+					margin-bottom: 1rem;
+					li:nth-child(2){
+						margin-bottom: 1rem;
+					}
+					span.postcode {
+						white-space:nowrap;
+					}
+				}
+				.social-media-links {
+					margin-top: 0.5rem;
+					li {
+						margin-right: 0.5rem;
+						display: inline;
+						a {
+							img {
+								transition: all 0.3s;
+							}
+							&:hover {
+								filter: grayscale(100%);
+								img {
+									transform: scale(1.05, 1.05);
+									transform: rotate(360deg);
+								}
+							}
+						}
+					}
+				}
+			}
+
 	}
+	.map {
+		display: grid;
+		.map-image {
+			margin-top: 2rem;
+			width: 50%;
+			img {
+				transition: all 0.3s;
+				border: 0.25rem solid transparent;
+				&:hover {
+					border: 0.25rem solid $brand;
+					border-radius: 0.5rem;
+				}
+			}
+		}
+	}
+
+}
+
+@include breakpoint( $break-s ) {
+	footer {
+		.container {
+			grid-template-columns: 75% 25%;
+		}
+		.map {
+			.map-image {
+				margin-top: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@include breakpoint( $break-m ) {
 	header {
 		div.logo {
 			width: 8rem;

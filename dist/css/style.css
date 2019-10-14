@@ -23,8 +23,14 @@ p {
 
 h2 {
   font-size: 2.5rem;
-  margin: 2rem 0;
+  margin: 0 0 3rem;
   text-align: center; }
+
+h3 {
+  margin: -0.5rem 0 0.5rem 0;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem; }
 
 img {
   overflow: hidden;
@@ -44,20 +50,35 @@ button {
     background-color: #F1C195;
     color: #ffffff; }
   button.call-to-action {
-    margin: 4rem auto;
+    margin: 4rem auto 0;
     display: block; }
 
 .button-mini {
   display: block;
   font-size: 0.8rem;
   padding: 0 0.5rem;
-  margin: 0.5rem 0;
   justify-self: end;
   align-self: start; }
 
 .grid-card {
   display: grid;
   align-items: start; }
+
+.product-card img {
+  margin-bottom: 0.5rem; }
+
+.product-card img, .product-card h3 a {
+  transition: all 0.3s; }
+
+.product-card:hover img {
+  transform: scale(1.01); }
+
+.product-card:hover h3 a {
+  color: #F1C195; }
+
+.product-card:hover button {
+  color: #ffffff;
+  background-color: #F1C195; }
 
 section {
   padding: 6rem 0; }
@@ -69,10 +90,10 @@ section {
     margin: 0	 auto; }
   .xs-card-one {
     grid-template-columns: 1fr;
-    gap: 2rem 0rem; }
+    gap: 4rem 0rem; }
   .xs-card-two {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem 1rem; }
+    gap: 4rem 1rem; }
   .xs-card-three {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem 1rem; }
@@ -97,6 +118,8 @@ section {
     gap: 1rem 1rem; } }
 
 @media only screen and (min-width: 900px) {
+  h2 {
+    font-size: 3rem; }
   .container {
     width: 86%; }
   .m-card-one {
@@ -164,9 +187,51 @@ nav {
         background-color: #F1C195;
         color: #ffffff; }
 
+footer {
+  width: 100%;
+  border-top: 0.5rem solid #F1C195;
+  padding: 4rem 0; }
+  footer .container {
+    display: grid;
+    grid-template-columns: 100%; }
+    footer .container .details .contact-details {
+      margin-bottom: 1rem; }
+      footer .container .details .contact-details li:nth-child(2) {
+        margin-bottom: 1rem; }
+      footer .container .details .contact-details span.postcode {
+        white-space: nowrap; }
+    footer .container .details .social-media-links {
+      margin-top: 0.5rem; }
+      footer .container .details .social-media-links li {
+        margin-right: 0.5rem;
+        display: inline; }
+        footer .container .details .social-media-links li a img {
+          transition: all 0.3s; }
+        footer .container .details .social-media-links li a:hover {
+          filter: grayscale(100%); }
+          footer .container .details .social-media-links li a:hover img {
+            transform: scale(1.05, 1.05);
+            transform: rotate(360deg); }
+  footer .map {
+    display: grid; }
+    footer .map .map-image {
+      margin-top: 2rem;
+      width: 50%; }
+      footer .map .map-image img {
+        transition: all 0.3s;
+        border: 0.25rem solid transparent; }
+        footer .map .map-image img:hover {
+          border: 0.25rem solid #F1C195;
+          border-radius: 0.5rem; }
+
+@media only screen and (min-width: 600px) {
+  footer .container {
+    grid-template-columns: 75% 25%; }
+  footer .map .map-image {
+    margin-top: 0;
+    width: 100%; } }
+
 @media only screen and (min-width: 900px) {
-  h2 {
-    font-size: 3rem; }
   header div.logo {
     width: 8rem;
     margin: 2rem 3vw; }
@@ -203,20 +268,6 @@ nav {
     margin-bottom: 0.5rem; }
   .baking .card p.description {
     font-size: 1rem; }
-  .baking .card img, .baking .card h3 a {
-    transition: all 0.3s; }
-  .baking .card h3 {
-    margin-bottom: 0.5rem;
-    text-align: left;
-    font-size: 1.5rem;
-    line-height: 1.5rem; }
-  .baking .card:hover img {
-    transform: scale(1.01); }
-  .baking .card:hover h3 a {
-    color: #F1C195; }
-  .baking .card:hover button {
-    color: #ffffff;
-    background-color: #F1C195; }
 
 .about-us {
   background-color: #fcfcfc; }
@@ -242,56 +293,8 @@ nav {
 .our-recipies {
   background: url(../img/background-our-recipies.jpg) no-repeat;
   background-size: cover; }
-  .our-recipies .card p {
-    margin-bottom: 0; }
-  .our-recipies .card img, .our-recipies .card p a {
-    transition: all 0.3s; }
-  .our-recipies .card:hover img {
-    transform: scale(1.01); }
-  .our-recipies .card:hover p a {
-    color: #F1C195; }
-  .our-recipies .card:hover button {
-    color: #ffffff;
-    background-color: #F1C195; }
-
-footer {
-  width: 100%;
-  border-top: 0.5rem solid #F1C195;
-  padding: 4rem 0; }
-  footer .container {
-    display: grid;
-    grid-template-columns: 50% 50%; }
-    footer .container .details .contact-details {
-      margin-bottom: 1rem; }
-      footer .container .details .contact-details li:nth-child(2) {
-        margin-bottom: 1rem; }
-    footer .container .details .social-media-links {
-      margin-top: 0.5rem; }
-      footer .container .details .social-media-links li {
-        margin-right: 0.5rem;
-        display: inline; }
-        footer .container .details .social-media-links li a img {
-          transition: all 0.3s; }
-        footer .container .details .social-media-links li a:hover {
-          filter: grayscale(100%); }
-          footer .container .details .social-media-links li a:hover img {
-            transform: scale(1.05, 1.05);
-            transform: rotate(360deg); }
-    footer .container .map {
-      display: grid; }
-      footer .container .map .map-image {
-        justify-self: end;
-        width: 50%; }
-        footer .container .map .map-image img {
-          transition: all 0.3s;
-          border: 0.25rem solid transparent; }
-          footer .container .map .map-image img:hover {
-            border: 0.25rem solid #F1C195;
-            border-radius: 0.5rem; }
 
 @media only screen and (min-width: 600px) {
-  .baking .card h3 {
-    line-height: 2rem; }
   .about-us .card {
     grid-template-columns: 1fr 2fr;
     gap: 0rem 3rem;
@@ -308,8 +311,7 @@ footer {
     font-size: 2rem; }
   .baking .card {
     grid-template-columns: 1fr;
-    gap: 0rem 4rem;
-    margin-bottom: 4rem; }
+    gap: 0rem 4rem; }
     .baking .card .image {
       margin-bottom: 0.5rem; }
     .baking .card .details {
