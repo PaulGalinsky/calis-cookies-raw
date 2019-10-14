@@ -193,30 +193,32 @@ footer {
   padding: 4rem 0; }
   footer .container {
     display: grid;
-    grid-template-columns: 100%; }
+    grid-template-columns: 83% 17%; }
     footer .container .details .contact-details {
       margin-bottom: 1rem; }
       footer .container .details .contact-details li:nth-child(2) {
         margin-bottom: 1rem; }
       footer .container .details .contact-details span.postcode {
         white-space: nowrap; }
-    footer .container .details .social-media-links {
+    footer .container .details .sm-section .social-media-links {
       margin-top: 0.5rem; }
-      footer .container .details .social-media-links li {
+      footer .container .details .sm-section .social-media-links li {
         margin-right: 0.5rem;
         display: inline; }
-        footer .container .details .social-media-links li a img {
+        footer .container .details .sm-section .social-media-links li:last-child {
+          margin-right: 0; }
+        footer .container .details .sm-section .social-media-links li a img {
           transition: all 0.3s; }
-        footer .container .details .social-media-links li a:hover {
+        footer .container .details .sm-section .social-media-links li a:hover {
           filter: grayscale(100%); }
-          footer .container .details .social-media-links li a:hover img {
+          footer .container .details .sm-section .social-media-links li a:hover img {
             transform: scale(1.05, 1.05);
             transform: rotate(360deg); }
   footer .map {
     display: grid; }
     footer .map .map-image {
-      margin-top: 2rem;
-      width: 50%; }
+      justify-self: end;
+      width: 100%; }
       footer .map .map-image img {
         transition: all 0.3s;
         border: 0.25rem solid transparent; }
@@ -226,10 +228,7 @@ footer {
 
 @media only screen and (min-width: 600px) {
   footer .container {
-    grid-template-columns: 75% 25%; }
-  footer .map .map-image {
-    margin-top: 0;
-    width: 100%; } }
+    grid-template-columns: 75% 25%; } }
 
 @media only screen and (min-width: 900px) {
   header div.logo {

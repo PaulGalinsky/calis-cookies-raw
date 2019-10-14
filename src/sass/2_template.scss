@@ -54,22 +54,26 @@ footer {
 
 	.container {
 		display: grid;
-		grid-template-columns: 100%;
-			.details {
-				.contact-details {
+		grid-template-columns: 83% 17%;
+		.details {
+			.contact-details {
+				margin-bottom: 1rem;
+				li:nth-child(2){
 					margin-bottom: 1rem;
-					li:nth-child(2){
-						margin-bottom: 1rem;
-					}
-					span.postcode {
-						white-space:nowrap;
-					}
 				}
+				span.postcode {
+					white-space:nowrap;
+				}
+			}
+			.sm-section {
 				.social-media-links {
 					margin-top: 0.5rem;
 					li {
 						margin-right: 0.5rem;
 						display: inline;
+						&:last-child {
+							margin-right: 0;
+						}
 						a {
 							img {
 								transition: all 0.3s;
@@ -85,13 +89,13 @@ footer {
 					}
 				}
 			}
-
+		}
 	}
 	.map {
 		display: grid;
 		.map-image {
-			margin-top: 2rem;
-			width: 50%;
+			justify-self: end;
+			width: 100%;
 			img {
 				transition: all 0.3s;
 				border: 0.25rem solid transparent;
@@ -102,7 +106,6 @@ footer {
 			}
 		}
 	}
-
 }
 
 @include breakpoint( $break-s ) {
@@ -110,14 +113,9 @@ footer {
 		.container {
 			grid-template-columns: 75% 25%;
 		}
-		.map {
-			.map-image {
-				margin-top: 0;
-				width: 100%;
-			}
-		}
 	}
 }
+
 
 @include breakpoint( $break-m ) {
 	header {
