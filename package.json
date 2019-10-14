@@ -1,15 +1,20 @@
 {
   "name": "caliscookiesvanilla",
   "version": "1.0.0",
-  "description": "",
+  "description": "A web development project by Paul Galinsky, based around delicious cookies",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Paul Galinsky",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PaulGalinsky/calis-cookies-raw.git"
   }
 }
