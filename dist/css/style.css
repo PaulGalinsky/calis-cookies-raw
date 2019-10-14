@@ -55,16 +55,18 @@ button {
   justify-self: end;
   align-self: start; }
 
-.container {
-  width: 80%;
-  max-width: 1060px;
-  margin: 0	 auto; }
-
 .grid-card {
   display: grid;
   align-items: start; }
 
+section {
+  padding: 6rem 0; }
+
 @media only screen and (min-width: 320px) {
+  .container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0	 auto; }
   .xs-card-one {
     grid-template-columns: 1fr;
     gap: 2rem 0rem; }
@@ -73,9 +75,14 @@ button {
     gap: 1rem 1rem; }
   .xs-card-three {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem 1rem; }
+  .xs-card-four {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem 1rem; } }
 
 @media only screen and (min-width: 600px) {
+  .container {
+    width: 90%; }
   .s-card-one {
     grid-template-columns: 1fr;
     gap: 2rem 0rem; }
@@ -84,9 +91,14 @@ button {
     gap: 2rem 2rem; }
   .s-card-three {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem 2rem; } }
+    gap: 2rem 2rem; }
+  .s-card-four {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem 1rem; } }
 
 @media only screen and (min-width: 900px) {
+  .container {
+    width: 86%; }
   .m-card-one {
     grid-template-columns: 1fr;
     gap: 4rem 0rem; }
@@ -95,7 +107,10 @@ button {
     gap: 4rem 4rem; }
   .m-card-three {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 4rem 4rem; } }
+    gap: 4rem 4rem; }
+  .m-card-four {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5rem 2.5rem; } }
 
 @media only screen and (min-width: 1200px) {
   .l-card-one {
@@ -106,18 +121,10 @@ button {
     gap: 6rem 6rem; }
   .l-card-three {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 6rem 6rem; } }
-
-@media only screen and (min-width: 1600px) {
-  .xl-card-one {
-    grid-template-columns: 1fr;
-    gap: 4rem 0rem; }
-  .xl-card-two {
-    grid-template-columns: 1fr 1fr;
-    gap: 8rem 8rem; }
-  .xl-card-three {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8rem 8rem; } }
+    gap: 6rem 6rem; }
+  .l-card-four {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem 3rem; } }
 
 header {
   width: 100%;
@@ -160,25 +167,13 @@ nav {
 @media only screen and (min-width: 900px) {
   h2 {
     font-size: 3rem; }
-  div.logo {
+  header div.logo {
     width: 8rem;
     margin: 2rem 3vw; }
   nav {
     padding: 2rem 1rem 0 0; }
     nav a {
       font-size: 1rem; } }
-
-.card-one {
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr;
-  gap: 4rem 4rem; }
-
-.card-four {
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 3rem 3rem; }
 
 .hero {
   background-image: url("../img/header_home.jpg");
@@ -200,33 +195,30 @@ nav {
     font-size: 1.3rem;
     text-align: center; }
 
-.baking {
-  margin: 6rem 0; }
-  .baking .card {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 0rem 1rem; }
-    .baking .card .image {
-      margin-bottom: 0.5rem; }
-    .baking .card p.description {
-      font-size: 1rem; }
-    .baking .card img, .baking .card h3 a {
-      transition: all 0.3s; }
-    .baking .card h3 {
-      margin-bottom: 0.5rem;
-      text-align: left;
-      font-size: 1.5rem;
-      line-height: 1.5rem; }
-    .baking .card:hover img {
-      transform: scale(1.01); }
-    .baking .card:hover h3 a {
-      color: #F1C195; }
-    .baking .card:hover button {
-      color: #ffffff;
-      background-color: #F1C195; }
+.baking .card {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 0rem 1rem; }
+  .baking .card .image {
+    margin-bottom: 0.5rem; }
+  .baking .card p.description {
+    font-size: 1rem; }
+  .baking .card img, .baking .card h3 a {
+    transition: all 0.3s; }
+  .baking .card h3 {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.5rem; }
+  .baking .card:hover img {
+    transform: scale(1.01); }
+  .baking .card:hover h3 a {
+    color: #F1C195; }
+  .baking .card:hover button {
+    color: #ffffff;
+    background-color: #F1C195; }
 
 .about-us {
-  padding: 4rem 0;
   background-color: #fcfcfc; }
   .about-us .card {
     align-items: center;
@@ -248,7 +240,6 @@ nav {
         text-align: left; }
 
 .our-recipies {
-  padding: 6rem;
   background: url(../img/background-our-recipies.jpg) no-repeat;
   background-size: cover; }
   .our-recipies .card p {
@@ -331,17 +322,11 @@ footer {
         justify-self: end; }
     .baking .card:last-child {
       display: none; }
-  .about-us {
-    padding: 6rem 0; }
-    .about-us .card {
-      grid-template-columns: 1fr 2.5fr;
-      gap: 0rem 4rem;
-      margin-bottom: 4rem; }
-      .about-us .card:nth-child(even) {
-        grid-template-columns: 2.5fr 1fr; }
-      .about-us .card p {
-        font-size: 1.5rem; } }
-
-@media only screen and (min-width: 1200px) {
-  footer {
-    background-color: #F1C195; } }
+  .about-us .card {
+    grid-template-columns: 1fr 2.5fr;
+    gap: 0rem 4rem;
+    margin-bottom: 4rem; }
+    .about-us .card:nth-child(even) {
+      grid-template-columns: 2.5fr 1fr; }
+    .about-us .card p {
+      font-size: 1.5rem; } }

@@ -8,7 +8,6 @@ $break-xs: 	320px;
 $break-s: 	600px;
 $break-m: 	900px;
 $break-l: 	1200px;
-$break-xl: 	1600px;
 
 // @include breakpoint( $break-s ) { css here }
 @mixin breakpoint( $point ) {
@@ -82,21 +81,21 @@ button {
 	align-self: start;
 }
 
-.container {
-	width: 80%;
-	max-width: 1060px;
-	margin: 0	 auto;
-}
-
 .grid-card {
 	display: grid;
 	align-items: start;
 }
 
-
-
+section {
+	padding: 6rem 0;
+}
 
 @include breakpoint( $break-xs ) {
+	.container {
+		width: 92%;
+		max-width: 1200px;
+		margin: 0	 auto;
+	}
 	.xs-card-one {
 		grid-template-columns: 1fr;
 		gap: 2rem 0rem;
@@ -109,10 +108,16 @@ button {
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 1rem 1rem;
 	}
+	.xs-card-four {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 1rem 1rem;
+	}
 }
 
-
 @include breakpoint( $break-s ) {
+	.container {
+		width: 90%;
+	}
 	.s-card-one {
 		grid-template-columns: 1fr;
 		gap: 2rem 0rem;
@@ -125,9 +130,16 @@ button {
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 2rem 2rem;
 	}
+	.s-card-four {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 1rem 1rem;
+	}
 }
 
 @include breakpoint( $break-m ) {
+	.container {
+		width: 86%;
+	}
 	.m-card-one {
 		grid-template-columns: 1fr;
 		gap: 4rem 0rem;
@@ -139,6 +151,10 @@ button {
 	.m-card-three {
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 4rem 4rem;
+	}
+	.m-card-four {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 2.5rem 2.5rem;
 	}
 }
 
@@ -155,20 +171,9 @@ button {
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 6rem 6rem;
 	}
-}
-
-@include breakpoint( $break-xl ) {
-	.xl-card-one {
-		grid-template-columns: 1fr;
-		gap: 4rem 0rem;
-	}
-	.xl-card-two {
-		grid-template-columns: 1fr 1fr;
-		gap: 8rem 8rem;
-	}
-	.xl-card-three {
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 8rem 8rem;
+	.l-card-four {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 3rem 3rem;
 	}
 }
 
