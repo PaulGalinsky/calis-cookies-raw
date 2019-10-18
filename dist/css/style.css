@@ -346,6 +346,9 @@ footer {
     .about-us .card p {
       font-size: 1.5rem; } }
 
+#aboutus a.nav-about {
+  border-bottom: 0.15rem solid #F1C195; }
+
 #aboutus .hero {
   background-image: url("../img/header_about.jpg");
   padding-bottom: 2rem; }

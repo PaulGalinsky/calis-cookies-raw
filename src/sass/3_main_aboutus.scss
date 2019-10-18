@@ -1,4 +1,8 @@
 #aboutus {
+	a.nav-about {
+			border-bottom: 0.15rem solid $brand;
+		}
+
 	.hero {
 		background-image: url("../img/header_about.jpg");
 		padding-bottom: 2rem;
