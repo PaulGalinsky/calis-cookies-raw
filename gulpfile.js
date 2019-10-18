@@ -18,7 +18,7 @@ function style() {
 
 function copyHTML() {
 	//find .html files in src
-	return gulp.src('src/*.html')
+	return gulp.src('src/**/*.html')
 	// copy them to distribution fodler
 		.pipe(gulp.dest('dist'));
 }
@@ -38,8 +38,8 @@ function watch() {
 		}
 	});
 	gulp.watch('src/sass/**/*.scss', style);
-	gulp.watch('src/*.html', copyHTML);
-	gulp.watch('src/*.html').on('change', browserSync.reload);
+	gulp.watch('src/**/*.html', copyHTML);
+	gulp.watch('src/**/*.html').on('change', browserSync.reload);
 	gulp.watch('src/js/**/*.js', copyJS);
 	gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
 }

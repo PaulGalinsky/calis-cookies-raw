@@ -369,90 +369,93 @@ footer {
     .about-us .card p {
       font-size: 1.5rem; } }
 
-#aboutus a.nav-about {
+body#about-us a.nav-about {
   border-bottom: 0.15rem solid #F1C195; }
 
-#aboutus .hero {
+body#about-us .hero {
   background-image: url("../img/header_about.jpg");
   padding-bottom: 2rem; }
-  #aboutus .hero .text {
+  body#about-us .hero .text {
     align-self: flex-end;
     margin-bottom: 0;
     padding-left: 5%;
     padding-right: 5%; }
-  #aboutus .hero .text h1 {
+  body#about-us .hero .text h1 {
     color: #ffffff;
     text-transform: none; }
-  #aboutus .hero .text p {
+  body#about-us .hero .text p {
     font-size: 1.3rem;
     max-width: 1200px;
     margin-bottom: 0; }
 
 @media only screen and (min-width: 600px) {
-  #aboutus .hero {
+  body#about-us .hero {
     height: 85vh;
     padding-bottom: 3rem; } }
 
 @media only screen and (min-width: 600px) {
-  #aboutus .hero .text p {
+  body#about-us .hero .text p {
     font-size: 1.2rem; } }
 
 @media only screen and (min-width: 900px) {
-  #aboutus .hero .text p {
+  body#about-us .hero .text p {
     font-size: 1.5rem; } }
 
 @media only screen and (min-width: 1200px) {
-  #aboutus .text {
+  body#about-us .text {
     padding-left: 0;
     padding-right: 0;
     max-width: 1200px; } }
 
-#ourrecipies a.nav-recipies {
+#our-recipies a.nav-recipies {
   border-bottom: 0.15rem solid #F1C195; }
 
-#ourrecipies .hero {
+#our-recipies .hero {
   background-image: url("../img/header_recipies.jpg");
   padding-bottom: 2rem; }
-  #ourrecipies .hero .text {
+  #our-recipies .hero .text {
     align-self: flex-end;
     margin-bottom: 0;
     padding-left: 5%;
     padding-right: 5%; }
-  #ourrecipies .hero .text h1 {
+  #our-recipies .hero .text h1 {
     color: #ffffff;
     text-transform: none; }
-  #ourrecipies .hero .text p {
+  #our-recipies .hero .text p {
     font-size: 1.3rem;
     max-width: 1200px;
     margin-bottom: 0; }
-    #ourrecipies .hero .text p a {
+    #our-recipies .hero .text p a {
       color: #ffffff;
       text-decoration: underline;
       transition: all 0.3s; }
-      #ourrecipies .hero .text p a:hover {
+      #our-recipies .hero .text p a:hover {
         color: #F1C195; }
 
-#ourrecipies section.our-recipies {
+#our-recipies.choc-goo-chew .hero {
+  background-image: url("../img/header_recipies_choc_goo_chew.jpg"); }
+
+#our-recipies section.our-recipies {
   background: none; }
 
-#ourrecipies section.baking {
+#our-recipies section.baking {
   background-color: #fcfcfc; }
 
 @media only screen and (min-width: 600px) {
-  #ourrecipies .hero {
+  #our-recipies .hero {
     height: 85vh;
     padding-bottom: 3rem; } }
 
 @media only screen and (min-width: 600px) {
-  #ourrecipies .hero .text p {
+  #our-recipies .hero .text p {
     font-size: 1.2rem; } }
 
 @media only screen and (min-width: 900px) {
-  #ourrecipies .hero .text p {
+  #our-recipies .hero .text p {
     font-size: 1.5rem; } }
 
 @media only screen and (min-width: 1200px) {
-  #ourrecipies .text {
+  #our-recipies .text {
     padding-left: 0;
     padding-right: 0;
     max-width: 1200px; } }

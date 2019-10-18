@@ -1,10 +1,10 @@
-#aboutus {
-	a.nav-about {
+#our-recipies {
+	a.nav-recipies {
 			border-bottom: 0.15rem solid $brand;
 		}
 
 	.hero {
-		background-image: url("../img/header_about.jpg");
+		background-image: url("../img/header_recipies.jpg");
 		padding-bottom: 2rem;
 		.text {
 			align-self: flex-end;
@@ -20,8 +20,31 @@
 			font-size: 1.3rem;
 			max-width: 1200px;
 			margin-bottom: 0;
+			a {
+				color: $white;
+				text-decoration: underline;
+				transition: all 0.3s;
+				&:hover {
+					color: $brand;
+				}
+			}
 		}
 	}
+
+	&.choc-goo-chew .hero{
+		background-image: url("../img/header_recipies_choc_goo_chew.jpg");
+	}
+
+
+	section.our-recipies {
+		background: none;
+	}
+
+	section.baking {
+		background-color: #fcfcfc;
+	}
+
+
 
 	@include breakpoint( $break-s ) {
 		.hero {
