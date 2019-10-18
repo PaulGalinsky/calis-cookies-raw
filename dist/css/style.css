@@ -12,10 +12,10 @@ body, html {
 
 ul {
   list-style: none;
-  font-size: 1.5rem; }
+  font-size: 1.2rem; }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem; }
   p.section-intro {
     text-align: center;
@@ -102,6 +102,9 @@ section {
     gap: 1rem 1rem; } }
 
 @media only screen and (min-width: 600px) {
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem; }
   .container {
     width: 90%; }
   .s-card-one {
@@ -118,6 +121,9 @@ section {
     gap: 1rem 1rem; } }
 
 @media only screen and (min-width: 900px) {
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem; }
   h2 {
     font-size: 3rem; }
   .container {
@@ -243,7 +249,9 @@ footer {
   nav {
     padding: 2rem 1rem 0 0; }
     nav a {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+  footer .details li, footer .details p {
+    font-size: 1.5rem; } }
 
 .hero {
   background-image: url("../img/header_home.jpg");
@@ -337,3 +345,38 @@ footer {
       grid-template-columns: 2.5fr 1fr; }
     .about-us .card p {
       font-size: 1.5rem; } }
+
+#aboutus .hero {
+  background-image: url("../img/header_about.jpg");
+  padding-bottom: 2rem; }
+  #aboutus .hero .text {
+    align-self: flex-end;
+    margin-bottom: 0;
+    padding-left: 5%;
+    padding-right: 5%; }
+  #aboutus .hero .text h1 {
+    color: #ffffff;
+    text-transform: none; }
+  #aboutus .hero .text p {
+    font-size: 1.3rem;
+    max-width: 1200px;
+    margin-bottom: 0; }
+
+@media only screen and (min-width: 600px) {
+  #aboutus .hero {
+    height: 85vh;
+    padding-bottom: 3rem; } }
+
+@media only screen and (min-width: 600px) {
+  #aboutus .hero .text p {
+    font-size: 1.2rem; } }
+
+@media only screen and (min-width: 900px) {
+  #aboutus .hero .text p {
+    font-size: 1.5rem; } }
+
+@media only screen and (min-width: 1200px) {
+  #aboutus .text {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1200px; } }

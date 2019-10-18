@@ -30,11 +30,11 @@ body, html {
 
 ul {
 	list-style: none;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 p {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	margin-bottom: 1rem;
 	&.section-intro {
 		text-align: center;
@@ -142,6 +142,10 @@ section {
 }
 
 @include breakpoint( $break-s ) {
+	p {
+		font-size: 1.2rem;
+		margin-bottom: 1.2rem;
+	}
 	.container {
 		width: 90%;
 	}
@@ -164,6 +168,10 @@ section {
 }
 
 @include breakpoint( $break-m ) {
+	p {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
 	h2 {
 		font-size: 3rem;
 	}
