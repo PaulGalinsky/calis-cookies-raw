@@ -39,6 +39,29 @@ nav {
 	}
 }
 
+section.search {
+	padding: 4rem 0 0rem;
+	margin-bottom:  -2rem;
+	.searchbar {
+		border: .095rem $brand solid;
+		border-radius: 2rem;
+		height: 3rem;
+		width: 80%;
+		margin: 0 auto;
+		display: grid;
+		padding: 0;
+		.search-icon{
+			justify-self: end;
+			background-image: url("../img/icon_search.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 99% 99%;
+			width: 3rem;
+			height: 100%;
+		}
+	}
+}
+
 footer {
 	width: 100%;
 	border-top: 0.5rem solid $brand;
@@ -146,6 +169,12 @@ footer {
 			font-size: 1rem;
 		}
 	}
+	section.search {
+		.searchbar {
+			width: 50%;
+		}
+	}
+
 	footer {
 		.details {
 			li, p {

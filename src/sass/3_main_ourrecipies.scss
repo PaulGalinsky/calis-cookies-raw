@@ -1,0 +1,77 @@
+#ourrecipies {
+	a.nav-recipies {
+			border-bottom: 0.15rem solid $brand;
+		}
+
+	.hero {
+		background-image: url("../img/header_recipies.jpg");
+		padding-bottom: 2rem;
+		.text {
+			align-self: flex-end;
+			margin-bottom: 0;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+		.text h1 {
+			color: $white;
+			text-transform: none;
+		}
+		.text p {
+			font-size: 1.3rem;
+			max-width: 1200px;
+			margin-bottom: 0;
+			a {
+				color: $white;
+				text-decoration: underline;
+				transition: all 0.3s;
+				&:hover {
+					color: $brand;
+				}
+			}
+		}
+	}
+
+
+	section.our-recipies {
+		background: none;
+	}
+
+	section.baking {
+		background-color: #fcfcfc;
+	}
+
+
+
+	@include breakpoint( $break-s ) {
+		.hero {
+			height: 85vh;
+			padding-bottom: 3rem;
+		}
+	}
+
+	@include breakpoint( $break-s ) {
+			.hero {
+				.text p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		@include breakpoint( $break-m ) {
+			.hero {
+				.text p {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+
+	@include breakpoint( $break-l ) {
+		.text {
+			padding-left: 0;
+			padding-right: 0;
+			max-width: 1200px;
+		}
+	}
+}
+

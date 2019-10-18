@@ -16,7 +16,8 @@ ul {
 
 p {
   font-size: 1.2rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  transition: all 0.3s; }
   p.section-intro {
     text-align: center;
     margin-bottom: 4rem; }
@@ -188,6 +189,26 @@ nav {
     nav a:hover.nav-about, nav a:hover.nav-recipies, nav a:hover.nav-shop {
       border-bottom: 0.15rem solid #F1C195; }
 
+section.search {
+  padding: 4rem 0 0rem;
+  margin-bottom: -2rem; }
+  section.search .searchbar {
+    border: 0.095rem #F1C195 solid;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    padding: 0; }
+    section.search .searchbar .search-icon {
+      justify-self: end;
+      background-image: url("../img/icon_search.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 99% 99%;
+      width: 3rem;
+      height: 100%; }
+
 footer {
   width: 100%;
   border-top: 0.5rem solid #F1C195;
@@ -250,6 +271,8 @@ footer {
     padding: 2rem 1rem 0 0; }
     nav a {
       font-size: 1rem; }
+  section.search .searchbar {
+    width: 50%; }
   footer .details li, footer .details p {
     font-size: 1.5rem; } }
 
@@ -380,6 +403,56 @@ footer {
 
 @media only screen and (min-width: 1200px) {
   #aboutus .text {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1200px; } }
+
+#ourrecipies a.nav-recipies {
+  border-bottom: 0.15rem solid #F1C195; }
+
+#ourrecipies .hero {
+  background-image: url("../img/header_recipies.jpg");
+  padding-bottom: 2rem; }
+  #ourrecipies .hero .text {
+    align-self: flex-end;
+    margin-bottom: 0;
+    padding-left: 5%;
+    padding-right: 5%; }
+  #ourrecipies .hero .text h1 {
+    color: #ffffff;
+    text-transform: none; }
+  #ourrecipies .hero .text p {
+    font-size: 1.3rem;
+    max-width: 1200px;
+    margin-bottom: 0; }
+    #ourrecipies .hero .text p a {
+      color: #ffffff;
+      text-decoration: underline;
+      transition: all 0.3s; }
+      #ourrecipies .hero .text p a:hover {
+        color: #F1C195; }
+
+#ourrecipies section.our-recipies {
+  background: none; }
+
+#ourrecipies section.baking {
+  background-color: #fcfcfc; }
+
+@media only screen and (min-width: 600px) {
+  #ourrecipies .hero {
+    height: 85vh;
+    padding-bottom: 3rem; } }
+
+@media only screen and (min-width: 600px) {
+  #ourrecipies .hero .text p {
+    font-size: 1.2rem; } }
+
+@media only screen and (min-width: 900px) {
+  #ourrecipies .hero .text p {
+    font-size: 1.5rem; } }
+
+@media only screen and (min-width: 1200px) {
+  #ourrecipies .text {
     padding-left: 0;
     padding-right: 0;
     max-width: 1200px; } }
