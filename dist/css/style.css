@@ -432,8 +432,32 @@ body#about-us .hero {
       #our-recipies .hero .text p a:hover {
         color: #F1C195; }
 
-#our-recipies.choc-goo-chew .hero {
+#our-recipies.our-recipies-sub-page .hero {
   background-image: url("../img/header_recipies_choc_goo_chew.jpg"); }
+
+#our-recipies.our-recipies-sub-page .recipie-container {
+  display: grid;
+  grid-template-columns: 1fr; }
+  @media (min-width: 900px) {
+    #our-recipies.our-recipies-sub-page .recipie-container {
+      grid-template-columns: 4fr 2fr;
+      gap: 0rem 4rem; } }
+  #our-recipies.our-recipies-sub-page .recipie-container .ingredients {
+    border-radius: 0 0 1rem 1rem;
+    align-self: start;
+    margin-top: -6rem;
+    padding: 4rem 0 2rem;
+    text-align: center;
+    background-color: #fcfcfc; }
+    #our-recipies.our-recipies-sub-page .recipie-container .ingredients h3 {
+      text-align: center; }
+
+#our-recipies.our-recipies-sub-page .your-baking-photos {
+  background-color: #fcfcfc; }
+
+#our-recipies.our-recipies-sub-page .our-recipies {
+  background: url(../img/background-our-recipies.jpg) no-repeat;
+  background-size: cover; }
 
 #our-recipies section.our-recipies {
   background: none; }

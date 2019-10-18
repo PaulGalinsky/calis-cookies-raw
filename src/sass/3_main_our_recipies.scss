@@ -31,10 +31,43 @@
 		}
 	}
 
-	&.choc-goo-chew .hero{
-		background-image: url("../img/header_recipies_choc_goo_chew.jpg");
-	}
+	&.our-recipies-sub-page {
+		.hero{
+			background-image: url("../img/header_recipies_choc_goo_chew.jpg");
+		}
+		.recipie-container {
+			display: grid;
+			grid-template-columns: 1fr;
 
+				@media (min-width: 900px) {
+					grid-template-columns: 4fr 2fr;
+					gap: 0rem 4rem;
+				}
+
+
+
+
+			.ingredients {
+				border-radius: 0 0 1rem 1rem;
+				align-self: start;
+				margin-top:	-6rem;
+				padding: 4rem 0 2rem;
+				text-align: center;
+				background-color: #fcfcfc;
+				h3 {
+					text-align: center;
+				}
+			}
+
+		}
+		.your-baking-photos {
+			background-color: #fcfcfc;
+		}
+		.our-recipies {
+			background: url(../img/background-our-recipies.jpg) no-repeat;
+			background-size: cover;
+		}
+	}
 
 	section.our-recipies {
 		background: none;
