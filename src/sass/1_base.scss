@@ -40,6 +40,13 @@ p {
 	&.section-intro {
 		text-align: center;
 		margin-bottom: 4rem;
+		a {
+			text-decoration: underline;
+			transition: all 0.3s;
+			&:hover {
+				color: $brand;
+			}
+		}
 	}
 }
 

@@ -21,6 +21,11 @@ p {
   p.section-intro {
     text-align: center;
     margin-bottom: 4rem; }
+    p.section-intro a {
+      text-decoration: underline;
+      transition: all 0.3s; }
+      p.section-intro a:hover {
+        color: #F1C195; }
 
 h2 {
   font-size: 2.5rem;
@@ -407,6 +412,9 @@ body#about-us .hero {
     padding-right: 0;
     max-width: 1200px; } }
 
+#our-recipies h1 {
+  flex-wrap: nowrap; }
+
 #our-recipies a.nav-recipies {
   border-bottom: 0.15rem solid #F1C195; }
 
@@ -415,9 +423,7 @@ body#about-us .hero {
   padding-bottom: 2rem; }
   #our-recipies .hero .text {
     align-self: flex-end;
-    margin-bottom: 0;
-    padding-left: 5%;
-    padding-right: 5%; }
+    margin-bottom: 0; }
   #our-recipies .hero .text h1 {
     color: #ffffff;
     text-transform: none; }
@@ -437,20 +443,35 @@ body#about-us .hero {
 
 #our-recipies.our-recipies-sub-page .recipie-container {
   display: grid;
-  grid-template-columns: 1fr; }
-  @media (min-width: 900px) {
-    #our-recipies.our-recipies-sub-page .recipie-container {
-      grid-template-columns: 4fr 2fr;
-      gap: 0rem 4rem; } }
+  grid-template-columns: 1fr;
+  gap: 4rem 0; }
   #our-recipies.our-recipies-sub-page .recipie-container .ingredients {
-    border-radius: 0 0 1rem 1rem;
-    align-self: start;
-    margin-top: -6rem;
-    padding: 4rem 0 2rem;
-    text-align: center;
-    background-color: #fcfcfc; }
+    background-color: #fcfcfc;
+    padding: 2rem; }
     #our-recipies.our-recipies-sub-page .recipie-container .ingredients h3 {
       text-align: center; }
+    #our-recipies.our-recipies-sub-page .recipie-container .ingredients li {
+      display: inline; }
+      #our-recipies.our-recipies-sub-page .recipie-container .ingredients li:after {
+        content: ','; }
+      #our-recipies.our-recipies-sub-page .recipie-container .ingredients li:last-child:after {
+        content: '.'; }
+  @media only screen and (min-width: 900px) {
+    #our-recipies.our-recipies-sub-page .recipie-container {
+      grid-template-columns: 4fr 2fr;
+      gap: 0rem 4rem; }
+      #our-recipies.our-recipies-sub-page .recipie-container .ingredients {
+        border-radius: 0 0 1rem 1rem;
+        align-self: start;
+        margin-top: -6rem;
+        padding: 4rem 0 2rem;
+        text-align: center; }
+        #our-recipies.our-recipies-sub-page .recipie-container .ingredients li {
+          display: block; }
+          #our-recipies.our-recipies-sub-page .recipie-container .ingredients li:after {
+            content: ''; }
+          #our-recipies.our-recipies-sub-page .recipie-container .ingredients li:last-child:after {
+            content: ''; } }
 
 #our-recipies.our-recipies-sub-page .your-baking-photos {
   background-color: #fcfcfc; }
