@@ -5,27 +5,24 @@ body, html {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: #616161;
   font-family: 'Reem Kufi', sans-serif;
   font-weight: 100;
   box-sizing: border-box; }
 
+.container {
+  margin: 0	auto;
+  max-width: 1200px;
+  width: 92%; }
+  @media only screen and (min-width: 600px) {
+    .container {
+      width: 90%; } }
+  @media only screen and (min-width: 900px) {
+    .container {
+      width: 86%; } }
+
 ul {
   list-style: none;
   font-size: 1.2rem; }
-
-p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s; }
-  p.section-intro {
-    text-align: center;
-    margin-bottom: 4rem; }
-    p.section-intro a {
-      text-decoration: underline;
-      transition: all 0.3s; }
-      p.section-intro a:hover {
-        color: #F1C195; }
 
 h2 {
   font-size: 2.5rem;
@@ -94,10 +91,6 @@ section {
   padding: 6rem 0; }
 
 @media only screen and (min-width: 320px) {
-  .container {
-    width: 92%;
-    max-width: 1200px;
-    margin: 0	 auto; }
   .xs-card-one {
     grid-template-columns: 1fr;
     gap: 4rem 0rem; }
@@ -112,11 +105,6 @@ section {
     gap: 1rem 1rem; } }
 
 @media only screen and (min-width: 600px) {
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem; }
-  .container {
-    width: 90%; }
   .s-card-one {
     grid-template-columns: 1fr;
     gap: 2rem 0rem; }
@@ -131,13 +119,6 @@ section {
     gap: 1rem 1rem; } }
 
 @media only screen and (min-width: 900px) {
-  p {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem; }
-  h2 {
-    font-size: 3rem; }
-  .container {
-    width: 86%; }
   .m-card-one {
     grid-template-columns: 1fr;
     gap: 4rem 0rem; }
@@ -285,26 +266,77 @@ footer {
   footer .details li, footer .details p {
     font-size: 1.5rem; } }
 
+/* ------------------------------------------
+HERO
+-------------------------------------------*/
 .hero {
-  background-image: url("../img/header_home.jpg");
+  align-items: flex-end;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0rem 0rem 10vh 10vh rgba(0, 0, 0, 0.75);
-  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center; }
-  .hero .text h1 {
-    color: #ffffff;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    text-align: center; }
-  .hero .text p {
-    color: #ffffff;
-    font-size: 1.3rem;
-    text-align: center; }
+  height: 85vh;
+  justify-content: center;
+  padding-bottom: 2rem; }
 
+.hero__text-container {
+  color: #ffffff;
+  text-align: center; }
+
+.hero__text-heading {
+  font-size: 2.5rem;
+  flex-wrap: nowrap; }
+
+.hero__text-intro {
+  font-size: 1.2rem; }
+  @media only screen and (min-width: 900px) {
+    .hero__text-intro {
+      font-size: 1.5rem; } }
+  .hero__text-intro a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: all 0.3s; }
+    .hero__text-intro a:hover {
+      color: #F1C195; }
+
+/* ------------------------------------------
+HERO: modifiers
+-------------------------------------------*/
+.hero--home {
+  background-image: url("../img/header_home.jpg");
+  height: 100vh;
+  align-items: center; }
+
+.hero--about-us {
+  background-image: url("../img/header_about.jpg"); }
+
+.hero--our-recipies {
+  background-image: url("../img/header_recipies.jpg"); }
+
+.hero--shop {
+  background-image: url("../img/header_shop.jpg"); }
+
+.hero--choc-goo-chew {
+  background-image: url("../img/header_recipies_choc_goo_chew.jpg"); }
+
+.hero__text-heading--home {
+  font-size: 3rem;
+  text-transform: uppercase; }
+  @media only screen and (min-width: 900px) {
+    .hero__text-heading--home {
+      font-size: 4rem;
+      line-height: 4rem; } }
+
+.hero__text-intro--home {
+  font-size: 1.5rem; }
+  @media only screen and (min-width: 900px) {
+    .hero__text-intro--home {
+      font-size: 2rem; } }
+
+/* ------------------------------------------
+the BEM stops here
+-------------------------------------------*/
 .baking .card {
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -350,10 +382,6 @@ footer {
       font-size: 1.2rem; } }
 
 @media only screen and (min-width: 900px) {
-  .hero .text h1 {
-    font-size: 4rem; }
-  .hero .text p {
-    font-size: 2rem; }
   .baking .card {
     grid-template-columns: 1fr;
     gap: 0rem 4rem; }
@@ -379,69 +407,8 @@ footer {
 body#about-us a.nav-about {
   border-bottom: 0.15rem solid #F1C195; }
 
-body#about-us .hero {
-  background-image: url("../img/header_about.jpg");
-  padding-bottom: 2rem; }
-  body#about-us .hero .text {
-    align-self: flex-end;
-    margin-bottom: 0;
-    padding-left: 5%;
-    padding-right: 5%; }
-  body#about-us .hero .text h1 {
-    color: #ffffff;
-    text-transform: none; }
-  body#about-us .hero .text p {
-    font-size: 1.3rem;
-    max-width: 1200px;
-    margin-bottom: 0; }
-
-@media only screen and (min-width: 600px) {
-  body#about-us .hero {
-    height: 85vh;
-    padding-bottom: 3rem; } }
-
-@media only screen and (min-width: 600px) {
-  body#about-us .hero .text p {
-    font-size: 1.2rem; } }
-
-@media only screen and (min-width: 900px) {
-  body#about-us .hero .text p {
-    font-size: 1.5rem; } }
-
-@media only screen and (min-width: 1200px) {
-  body#about-us .text {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1200px; } }
-
-#our-recipies h1 {
-  flex-wrap: nowrap; }
-
 #our-recipies a.nav-recipies {
   border-bottom: 0.15rem solid #F1C195; }
-
-#our-recipies .hero {
-  background-image: url("../img/header_recipies.jpg");
-  padding-bottom: 2rem; }
-  #our-recipies .hero .text {
-    align-self: flex-end;
-    margin-bottom: 0; }
-  #our-recipies .hero .text h1 {
-    color: #ffffff;
-    text-transform: none; }
-  #our-recipies .hero .text p {
-    font-size: 1.3rem;
-    max-width: 1200px;
-    margin-bottom: 0; }
-    #our-recipies .hero .text p a {
-      color: #ffffff;
-      text-decoration: underline;
-      transition: all 0.3s; }
-      #our-recipies .hero .text p a:hover {
-        color: #F1C195; }
-
-#our-recipies.our-recipies-sub-page .hero {
-  background-image: url("../img/header_recipies_choc_goo_chew.jpg"); }
 
 #our-recipies.our-recipies-sub-page .recipie-container {
   display: grid;
@@ -487,61 +454,3 @@ body#about-us .hero {
 
 #our-recipies section.baking {
   background-color: #fcfcfc; }
-
-@media only screen and (min-width: 600px) {
-  #our-recipies .hero {
-    height: 85vh;
-    padding-bottom: 3rem; } }
-
-@media only screen and (min-width: 600px) {
-  #our-recipies .hero .text p {
-    font-size: 1.2rem; } }
-
-@media only screen and (min-width: 900px) {
-  #our-recipies .hero .text p {
-    font-size: 1.5rem; } }
-
-@media only screen and (min-width: 1200px) {
-  #our-recipies .text {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1200px; } }
-
-#shop .hero {
-  background-image: url("../img/header_shop.jpg");
-  padding-bottom: 2rem; }
-  #shop .hero .text {
-    align-self: flex-end;
-    margin-bottom: 0; }
-  #shop .hero .text h1 {
-    color: #ffffff;
-    text-transform: none; }
-  #shop .hero .text p {
-    font-size: 1.3rem;
-    max-width: 1200px;
-    margin-bottom: 0; }
-    #shop .hero .text p a {
-      color: #ffffff;
-      text-decoration: underline;
-      transition: all 0.3s; }
-      #shop .hero .text p a:hover {
-        color: #F1C195; }
-
-@media only screen and (min-width: 600px) {
-  #shop .hero {
-    height: 85vh;
-    padding-bottom: 3rem; } }
-
-@media only screen and (min-width: 600px) {
-  #shop .hero .text p {
-    font-size: 1.2rem; } }
-
-@media only screen and (min-width: 900px) {
-  #shop .hero .text p {
-    font-size: 1.5rem; } }
-
-@media only screen and (min-width: 1200px) {
-  #shop .text {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1200px; } }

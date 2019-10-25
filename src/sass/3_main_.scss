@@ -1,25 +1,102 @@
+/* ------------------------------------------
+HERO
+-------------------------------------------*/
+
 .hero {
-	background-image: url("../img/header_home.jpg");
+	align-items: flex-end;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: inset 0rem 0rem 10vh 10vh rgba(0,0,0,0.75);
-	height: 100vh;
 	display: flex;
-	align-items: center;
+	height: 85vh;
 	justify-content: center;
-	.text h1 {
-		color: $white;
-		font-size: 2.5rem;
-		text-transform: uppercase;
-		text-align: center;
+	padding-bottom: 2rem;
+}
+
+.hero__text-container {
+	color: $white;
+	text-align: center;
+}
+
+.hero__text-heading {
+	font-size: 2.5rem;
+	flex-wrap: nowrap;
+}
+
+.hero__text-intro {
+	font-size: 1.2rem;
+
+	@include breakpoint( $break-m ) {
+		font-size: 1.5rem;
 	}
-	.text p {
-		color:$white;
-		font-size: 1.3rem;
-		text-align: center;
+
+	a {
+		color: $white;
+		text-decoration: underline;
+		transition: all 0.3s;
+		&:hover {
+			color: $brand;
+		}
 	}
 }
+
+
+/* ------------------------------------------
+HERO: modifiers
+-------------------------------------------*/
+
+.hero--home {
+	background-image: url("../img/header_home.jpg");
+	height: 100vh;
+	align-items: center;
+}
+
+.hero--about-us {
+	background-image: url("../img/header_about.jpg");
+}
+
+.hero--our-recipies {
+	background-image: url("../img/header_recipies.jpg");
+}
+
+.hero--shop {
+	background-image: url("../img/header_shop.jpg");
+}
+
+.hero--choc-goo-chew {
+	background-image: url("../img/header_recipies_choc_goo_chew.jpg");
+}
+
+.hero__text-heading--home {
+	font-size: 3rem;
+	text-transform: uppercase;
+	@include breakpoint( $break-m ) {
+		font-size: 4rem;
+		line-height: 4rem;
+	}
+}
+
+.hero__text-intro--home {
+	font-size: 1.5rem;
+	@include breakpoint( $break-m ) {
+		font-size: 2rem;
+	}
+}
+
+
+
+/* ------------------------------------------
+the BEM stops here
+-------------------------------------------*/
+
+
+
+
+
+
+
+
 
 .baking {
 	.card {
@@ -88,14 +165,6 @@
 }
 
 @include breakpoint( $break-m ) {
-	.hero {
-		.text h1 {
-			font-size: 4rem;
-		}
-		.text p {
-			font-size: 2rem;
-		}
-	}
 
 	.baking {
 		.card {

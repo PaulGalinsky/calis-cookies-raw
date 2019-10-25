@@ -14,6 +14,8 @@ $break-l: 	1200px;
 	@media only screen and ( min-width: $point ) { @content; }
 }
 
+
+// resets
 body, html {
 	height: 100%;
 }
@@ -22,33 +24,57 @@ body, html {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-	color: $dark;
 	font-family: 'Reem Kufi', sans-serif;
 	font-weight: 100;
 	box-sizing: border-box;
 }
+
+
+// helpers
+.container {
+	margin: 0	auto;
+	max-width: 1200px;
+	width: 92%;
+
+	@include breakpoint( $break-s ) {
+		width: 90%;
+	}
+
+	@include breakpoint( $break-m ) {
+		width: 86%;
+	}
+}
+
+
+// base
+
+
+
+
+
+
 
 ul {
 	list-style: none;
 	font-size: 1.2rem;
 }
 
-p {
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-	transition: all 0.3s;
-	&.section-intro {
-		text-align: center;
-		margin-bottom: 4rem;
-		a {
-			text-decoration: underline;
-			transition: all 0.3s;
-			&:hover {
-				color: $brand;
-			}
-		}
-	}
-}
+// p {
+// 	font-size: 1.2rem;
+// 	margin-bottom: 1rem;
+// 	transition: all 0.3s;
+// 	&.section-intro {
+// 		text-align: center;
+// 		margin-bottom: 4rem;
+// 		a {
+// 			text-decoration: underline;
+// 			transition: all 0.3s;
+// 			&:hover {
+// 				color: $brand;
+// 			}
+// 		}
+// 	}
+// }
 
 h2 {
 	font-size: 2.5rem;
@@ -137,11 +163,7 @@ section {
 }
 
 @include breakpoint( $break-xs ) {
-	.container {
-		width: 92%;
-		max-width: 1200px;
-		margin: 0	 auto;
-	}
+
 	.xs-card-one {
 		grid-template-columns: 1fr;
 		gap: 4rem 0rem;
@@ -161,13 +183,10 @@ section {
 }
 
 @include breakpoint( $break-s ) {
-	p {
-		font-size: 1.2rem;
-		margin-bottom: 1.2rem;
-	}
-	.container {
-		width: 90%;
-	}
+	// p {
+	// 	font-size: 1.2rem;
+	// 	margin-bottom: 1.2rem;
+	// }
 	.s-card-one {
 		grid-template-columns: 1fr;
 		gap: 2rem 0rem;
@@ -187,16 +206,13 @@ section {
 }
 
 @include breakpoint( $break-m ) {
-	p {
-		font-size: 1.5rem;
-		margin-bottom: 1.5rem;
-	}
-	h2 {
-		font-size: 3rem;
-	}
-	.container {
-		width: 86%;
-	}
+	// p {
+	// 	font-size: 1.5rem;
+	// 	margin-bottom: 1.5rem;
+	// }
+	// h2 {
+	// 	font-size: 3rem;
+	// }
 	.m-card-one {
 		grid-template-columns: 1fr;
 		gap: 4rem 0rem;
