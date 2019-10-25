@@ -69,30 +69,41 @@ img {
 	height: auto;
 }
 
-button {
+
+
+
+a.button-mini, a.call-to-action {
+	display: inline-block;
 	background-color: transparent;
 	color: $brand;
 	border: 0.15rem solid $brand;
 	border-radius: 0.5rem;
-	font-size: 1rem;
-	padding: 0.5rem 2rem;
 	text-transform: uppercase;
 	transition: all 0.3s;
 	&:hover {
 		background-color: $brand;
 		color: $white;
 	}
-	&.call-to-action {
-		margin: 4rem auto 0;
-		display: block;
-	}
 }
-.button-mini {
-	display: block;
+a.button-mini {
 	font-size: 0.8rem;
 	padding: 0 0.5rem;
 	justify-self: end;
 	align-self: start;
+}
+a.call-to-action {
+	font-size: 1rem;
+	padding: 0.5rem 2rem;
+	margin: 4rem auto 0;
+	justify-self: center;
+}
+
+
+
+
+
+.grid {
+	display: grid;
 }
 
 .grid-card {
