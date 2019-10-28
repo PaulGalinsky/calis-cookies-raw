@@ -199,45 +199,6 @@ section.search {
       width: 3rem;
       height: 100%; }
 
-footer {
-  width: 100%;
-  border-top: 0.5rem solid #F1C195;
-  padding: 4rem 0; }
-  footer .container {
-    display: grid;
-    grid-template-columns: 83% 17%; }
-    footer .container .details .contact-details {
-      margin-bottom: 1rem; }
-      footer .container .details .contact-details li:nth-child(2) {
-        margin-bottom: 1rem; }
-      footer .container .details .contact-details span.postcode {
-        white-space: nowrap; }
-    footer .container .details .sm-section .social-media-links {
-      margin-top: 0.5rem; }
-      footer .container .details .sm-section .social-media-links li {
-        margin-right: 0.5rem;
-        display: inline; }
-        footer .container .details .sm-section .social-media-links li:last-child {
-          margin-right: 0; }
-        footer .container .details .sm-section .social-media-links li a img {
-          transition: all 0.3s; }
-        footer .container .details .sm-section .social-media-links li a:hover {
-          filter: grayscale(100%); }
-          footer .container .details .sm-section .social-media-links li a:hover img {
-            transform: scale(1.05, 1.05);
-            transform: rotate(360deg); }
-  footer .map {
-    display: grid; }
-    footer .map .map-image {
-      justify-self: end;
-      width: 100%; }
-      footer .map .map-image img {
-        transition: all 0.3s;
-        border: 0.25rem solid transparent; }
-        footer .map .map-image img:hover {
-          border: 0.25rem solid #F1C195;
-          border-radius: 0.5rem; }
-
 @media only screen and (min-width: 600px) {
   nav a {
     display: inline;
@@ -249,9 +210,7 @@ footer {
       padding: 0.5rem 1rem; }
       nav a.nav-shop:hover {
         background-color: #F1C195;
-        color: #ffffff; }
-  footer .container {
-    grid-template-columns: 75% 25%; } }
+        color: #ffffff; } }
 
 @media only screen and (min-width: 900px) {
   header div.logo {
@@ -262,9 +221,59 @@ footer {
     nav a {
       font-size: 1rem; }
   section.search .searchbar {
-    width: 50%; }
-  footer .details li, footer .details p {
-    font-size: 1.5rem; } }
+    width: 50%; } }
+
+/* ------------------------------------------
+FOOTER
+-------------------------------------------*/
+.footer {
+  width: 100%;
+  border-top: 0.5rem solid #F1C195;
+  padding: 4rem 0; }
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 83% 17%; }
+  @media only screen and (min-width: 600px) {
+    .footer-content {
+      grid-template-columns: 75% 25%; } }
+
+.footer-content__contact-details {
+  margin-bottom: 1rem; }
+
+.footer-content__text {
+  color: #616161;
+  font-size: 1.3rem; }
+  @media only screen and (min-width: 900px) {
+    .footer-content__text {
+      font-size: 1.5rem; } }
+  .footer-content__text a {
+    color: #616161;
+    transition: all 0.3s; }
+    .footer-content__text a:hover {
+      color: #F1C195; }
+
+.footer-content__text--sm-heading {
+  margin: 1rem 0 1rem; }
+
+.footer-content__sm-list-item {
+  margin-right: 0.5rem;
+  display: inline; }
+  .footer-content__sm-list-item:last-child {
+    margin-right: 0; }
+
+.footer-content__sm-icon {
+  transition: all 0.3s; }
+  .footer-content__sm-icon:hover {
+    filter: grayscale(100%);
+    transform: rotate(360deg); }
+
+.footer-content__map img {
+  transition: all 0.3s;
+  border: 0.25rem solid transparent; }
+  .footer-content__map img:hover {
+    border: 0.25rem solid #F1C195;
+    border-radius: 0.5rem; }
 
 /* ------------------------------------------
 HERO
@@ -300,9 +309,6 @@ HERO
     .hero__text-intro a:hover {
       color: #F1C195; }
 
-/* ------------------------------------------
-HERO: modifiers
--------------------------------------------*/
 .hero--home {
   background-image: url("../img/header_home.jpg");
   height: 100vh;

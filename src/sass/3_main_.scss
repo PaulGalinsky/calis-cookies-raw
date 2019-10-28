@@ -1,4 +1,73 @@
 /* ------------------------------------------
+FOOTER
+-------------------------------------------*/
+
+.footer {
+	width: 100%;
+	border-top: 0.5rem solid $brand;
+	padding: 4rem 0;
+}
+
+.footer-content {
+	display: grid;
+	grid-template-columns: 83% 17%;
+	@include breakpoint( $break-s ) {
+		grid-template-columns: 75% 25%;
+	}
+}
+
+.footer-content__contact-details {
+	margin-bottom: 1rem;
+}
+
+.footer-content__text {
+	color: $dark;
+	font-size: 1.3rem;
+	@include breakpoint( $break-m ) {
+		font-size: 1.5rem;
+	}
+	a {
+		color: $dark;
+		transition: all 0.3s;
+		&:hover {
+			color: $brand;
+		}
+	}
+}
+
+.footer-content__text--sm-heading {
+	margin: 1rem 0 1rem;
+}
+
+.footer-content__sm-list-item {
+	margin-right: 0.5rem;
+	display: inline;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.footer-content__sm-icon {
+	transition: all 0.3s;
+	&:hover {
+		filter: grayscale(100%);
+		transform: rotate(360deg);
+	}
+}
+
+.footer-content__map {
+	img {
+		transition: all 0.3s;
+		border: 0.25rem solid transparent;
+		&:hover {
+			border: 0.25rem solid $brand;
+			border-radius: 0.5rem;
+		}
+	}
+}
+
+
+/* ------------------------------------------
 HERO
 -------------------------------------------*/
 
@@ -41,11 +110,6 @@ HERO
 	}
 }
 
-
-/* ------------------------------------------
-HERO: modifiers
--------------------------------------------*/
-
 .hero--home {
 	background-image: url("../img/header_home.jpg");
 	height: 100vh;
@@ -83,7 +147,6 @@ HERO: modifiers
 		font-size: 2rem;
 	}
 }
-
 
 
 /* ------------------------------------------
