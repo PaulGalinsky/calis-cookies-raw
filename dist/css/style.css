@@ -284,15 +284,21 @@ HERO
   background-image: url("../img/header_recipies_choc_goo_chew.jpg"); }
 
 .hero__text-heading--home {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase; }
+  @media only screen and (min-width: 600px) {
+    .hero__text-heading--home {
+      font-size: 3rem; } }
   @media only screen and (min-width: 900px) {
     .hero__text-heading--home {
       font-size: 4rem;
       line-height: 4rem; } }
 
 .hero__text-intro--home {
-  font-size: 1.5rem; }
+  font-size: 1.3rem; }
+  @media only screen and (min-width: 600px) {
+    .hero__text-intro--home {
+      font-size: 1.5rem; } }
   @media only screen and (min-width: 900px) {
     .hero__text-intro--home {
       font-size: 2rem; } }

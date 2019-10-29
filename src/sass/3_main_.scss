@@ -145,8 +145,11 @@ HERO
 }
 
 .hero__text-heading--home {
-	font-size: 3rem;
+	font-size: 2rem;
 	text-transform: uppercase;
+	@include breakpoint( $break-s ) {
+		font-size: 3rem;
+	}
 	@include breakpoint( $break-m ) {
 		font-size: 4rem;
 		line-height: 4rem;
@@ -154,7 +157,10 @@ HERO
 }
 
 .hero__text-intro--home {
+	font-size: 1.3rem;
+	@include breakpoint( $break-s ) {
 	font-size: 1.5rem;
+	}
 	@include breakpoint( $break-m ) {
 		font-size: 2rem;
 	}
