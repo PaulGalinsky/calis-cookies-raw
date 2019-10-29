@@ -23,6 +23,7 @@ FOOTER
 .footer-content__text {
 	color: $dark;
 	font-size: 1.3rem;
+	list-style-type: none;
 	@include breakpoint( $break-m ) {
 		font-size: 1.5rem;
 	}
@@ -37,6 +38,7 @@ FOOTER
 
 .footer-content__text--sm-heading {
 	margin: 1rem 0 1rem;
+
 }
 
 .footer-content__sm-list-item {
@@ -71,6 +73,7 @@ FOOTER
 HEADER
 -------------------------------------------*/
 
+
 .header {
 	width: 100%;
 	height: 10rem;
@@ -79,9 +82,11 @@ HEADER
 	left: 0;
 }
 
+
 /* ------------------------------------------
 HERO
 -------------------------------------------*/
+
 
 .hero {
 	align-items: flex-end;
@@ -201,6 +206,7 @@ LOGO
 NAVIGATION
 -------------------------------------------*/
 
+
 	.navigation {
 		position: absolute;
 		padding: 1rem 0.5rem 0 0;
@@ -261,6 +267,47 @@ NAVIGATION
 		}
 	}
 
+
+/* ------------------------------------------
+SECTION-PRIMARY
+-------------------------------------------*/
+
+
+.section-primary {
+	padding: 6rem 0;
+}
+
+.section-primary__title {
+	color: $dark;
+	font-size: 2rem;
+	margin: 0 auto 2rem;
+	text-align: center;
+	@include breakpoint( $break-m ) {
+		font-size: 2.5rem;
+	}
+}
+
+.section-primary__text-intro {
+	color: $dark;
+	font-size: 1.2rem;
+	margin: 0 auto 3rem;
+	text-align: center;
+	@include breakpoint( $break-m ) {
+		font-size: 1.5rem;
+		max-width: 90%;
+	}
+	a {
+		color: $dark;
+		transition: all 0.3s;
+		text-decoration: underline;
+
+		&:hover {
+			color: $brand;
+		}
+	}
+}
+
+
 /* ------------------------------------------
 the BEM stops here
 -------------------------------------------*/
@@ -268,112 +315,40 @@ the BEM stops here
 
 
 
-
-
-
-
-
-.baking {
-	.card {
+section.search {
+	padding: 4rem 0 0rem;
+	margin-bottom:  -2rem;
+	.searchbar {
+		border: .095rem $brand solid;
+		border-radius: 2rem;
+		height: 3rem;
+		width: 80%;
+		margin: 0 auto;
 		display: grid;
-		grid-template-columns: 2fr 3fr;
-		gap: 0rem 1rem;
-		.image {
-			margin-bottom: 0.5rem;
+		padding: 0;
+		@include breakpoint( $break-m ) {
+			width: 50%;
 		}
-		p.description {
-			font-size: 1rem;
-		}
-	}
-}
 
-
-.about-us {
-	background-color: #fcfcfc;
-	.card {
-		align-items: center;
-		display: grid;
-		grid-template-columns: 1fr 2.5fr;
-		gap: 0rem 2rem;
-		margin-bottom: 1rem;
-		p {
-			font-size: 1rem;
-			text-align: right;
-		}
-		.image {
-			justify-self: center;
-		}
-		&:nth-child(even){
-			grid-template-columns: 2.5fr 1fr;
-			.image {
-				order: 2;
-			}
-			p {
-				order: 1;
-				text-align: left;
-			}
+		.search-icon {
+			justify-self: end;
+			background-image: url("../img/icon_search.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 99% 99%;
+			width: 3rem;
+			height: 100%;
 		}
 	}
 }
 
-.our-recipies {
-	background: url(../img/background-our-recipies.jpg) no-repeat;
-	background-size: cover;
-}
 
 
 
-@include breakpoint( $break-s ) {
-	.about-us {
-		.card {
-			grid-template-columns: 1fr 2fr;
-			gap: 0rem 3rem;
-			margin-bottom: 3rem;
-			&:nth-child(even){
-				grid-template-columns: 2fr 1fr;
-			}
-			p {
-				font-size: 1.2rem;
-			}
-		}
-	}
-}
 
-@include breakpoint( $break-m ) {
 
-	.baking {
-		.card {
-			grid-template-columns: 1fr;
-			gap: 0rem 4rem;
-			.image {
-				margin-bottom: 0.5rem;
-			}
-			.details {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 0rem 1rem;
-				p {
-					display: none;
-				}
-			}
-			&:last-child {
-				display: none;
-			}
-		}
-	}
 
-	.about-us {
-		.card {
-			grid-template-columns: 1fr 2.5fr;
-			gap: 0rem 4rem;
-			margin-bottom: 4rem;
-			&:nth-child(even){
-				grid-template-columns: 2.5fr 1fr;
-			}
-			p {
-				font-size: 1.5rem;
-			}
-		}
-	}
-}
+
+
+
 

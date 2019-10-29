@@ -1,21 +1,33 @@
-// colors
+/* ------------------------------------------
+COLORS
+-------------------------------------------*/
+
+
 $dark: #616161;
 $white: #ffffff;
 $brand: #F1C195;
 
-// breakpoints:
+
+/* ------------------------------------------
+BREAKPOINTS
+-------------------------------------------*/
+
+
 $break-xs: 	320px;
 $break-s: 	600px;
 $break-m: 	900px;
 $break-l: 	1200px;
 
-// @include breakpoint( $break-s ) { css here }
 @mixin breakpoint( $point ) {
 	@media only screen and ( min-width: $point ) { @content; }
 }
 
 
-// resets
+/* ------------------------------------------
+RESETS
+-------------------------------------------*/
+
+
 body, html {
 	height: 100%;
 }
@@ -29,66 +41,6 @@ body, html {
 	box-sizing: border-box;
 }
 
-
-// helpers
-.container {
-	margin: 0	auto;
-	max-width: 1200px;
-	width: 92%;
-
-	@include breakpoint( $break-s ) {
-		width: 90%;
-	}
-
-	@include breakpoint( $break-m ) {
-		width: 86%;
-	}
-}
-
-
-// base
-
-
-
-
-
-
-
-ul {
-	list-style: none;
-	font-size: 1.2rem;
-}
-
-// p {
-// 	font-size: 1.2rem;
-// 	margin-bottom: 1rem;
-// 	transition: all 0.3s;
-// 	&.section-intro {
-// 		text-align: center;
-// 		margin-bottom: 4rem;
-// 		a {
-// 			text-decoration: underline;
-// 			transition: all 0.3s;
-// 			&:hover {
-// 				color: $brand;
-// 			}
-// 		}
-// 	}
-// }
-
-h2 {
-	font-size: 2.5rem;
-	margin: 0 0 3rem;
-	text-align: center;
-}
-
-h3 {
-	margin: -0.5rem 0 0.5rem 0; //aligns with image tops
-	text-align: left;
-	font-size: 1.5rem;
-	line-height: 2rem;
-}
-
 img {
 	overflow: hidden;
 	max-width: 100%;
@@ -96,7 +48,32 @@ img {
 }
 
 
+/* ------------------------------------------
+HELPER CLASSES
+-------------------------------------------*/
 
+
+.container {
+	margin: 0	auto;
+	max-width: 1200px;
+	width: 92%;
+	@include breakpoint( $break-s ) {
+		width: 90%;
+	}
+	@include breakpoint( $break-m ) {
+		width: 86%;
+	}
+}
+
+
+
+
+
+
+
+/* ------------------------------------------
+MAKE ME BEM!!!!!
+-------------------------------------------*/
 
 a.button-mini, a.call-to-action {
 	display: inline-block;
@@ -158,9 +135,7 @@ a.call-to-action {
 	}
 }
 
-section {
-	padding: 6rem 0;
-}
+
 
 @include breakpoint( $break-xs ) {
 
@@ -183,10 +158,7 @@ section {
 }
 
 @include breakpoint( $break-s ) {
-	// p {
-	// 	font-size: 1.2rem;
-	// 	margin-bottom: 1.2rem;
-	// }
+
 	.s-card-one {
 		grid-template-columns: 1fr;
 		gap: 2rem 0rem;
@@ -206,13 +178,6 @@ section {
 }
 
 @include breakpoint( $break-m ) {
-	// p {
-	// 	font-size: 1.5rem;
-	// 	margin-bottom: 1.5rem;
-	// }
-	// h2 {
-	// 	font-size: 3rem;
-	// }
 	.m-card-one {
 		grid-template-columns: 1fr;
 		gap: 4rem 0rem;
@@ -249,5 +214,117 @@ section {
 		gap: 3rem 3rem;
 	}
 }
+
+
+
+
+
+
+.baking {
+	.card {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		gap: 0rem 1rem;
+		.image {
+			margin-bottom: 0.5rem;
+		}
+		p.description {
+			font-size: 1rem;
+		}
+	}
+}
+
+
+
+
+
+
+
+.about-us {
+	background-color: #fcfcfc;
+	.card {
+		align-items: center;
+		display: grid;
+		grid-template-columns: 1fr 2.5fr;
+		gap: 0rem 2rem;
+		margin-bottom: 1rem;
+		p {
+			font-size: 1rem;
+			text-align: right;
+		}
+		.image {
+			justify-self: center;
+		}
+		&:nth-child(even){
+			grid-template-columns: 2.5fr 1fr;
+			.image {
+				order: 2;
+			}
+			p {
+				order: 1;
+				text-align: left;
+			}
+		}
+	}
+}
+
+
+
+
+
+@include breakpoint( $break-s ) {
+	.about-us {
+		.card {
+			grid-template-columns: 1fr 2fr;
+			gap: 0rem 3rem;
+			margin-bottom: 3rem;
+			&:nth-child(even){
+				grid-template-columns: 2fr 1fr;
+			}
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@include breakpoint( $break-m ) {
+
+	.baking {
+		.card {
+			grid-template-columns: 1fr;
+			gap: 0rem 4rem;
+			.image {
+				margin-bottom: 0.5rem;
+			}
+			.details {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 0rem 1rem;
+				p {
+					display: none;
+				}
+			}
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+
+	.about-us {
+		.card {
+			grid-template-columns: 1fr 2.5fr;
+			gap: 0rem 4rem;
+			margin-bottom: 4rem;
+			&:nth-child(even){
+				grid-template-columns: 2.5fr 1fr;
+			}
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
 
 

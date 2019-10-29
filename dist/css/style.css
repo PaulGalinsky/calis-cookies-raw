@@ -1,3 +1,12 @@
+/* ------------------------------------------
+COLORS
+-------------------------------------------*/
+/* ------------------------------------------
+BREAKPOINTS
+-------------------------------------------*/
+/* ------------------------------------------
+RESETS
+-------------------------------------------*/
 body, html {
   height: 100%; }
 
@@ -9,6 +18,14 @@ body, html {
   font-weight: 100;
   box-sizing: border-box; }
 
+img {
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+
+/* ------------------------------------------
+HELPER CLASSES
+-------------------------------------------*/
 .container {
   margin: 0	auto;
   max-width: 1200px;
@@ -20,26 +37,9 @@ body, html {
     .container {
       width: 86%; } }
 
-ul {
-  list-style: none;
-  font-size: 1.2rem; }
-
-h2 {
-  font-size: 2.5rem;
-  margin: 0 0 3rem;
-  text-align: center; }
-
-h3 {
-  margin: -0.5rem 0 0.5rem 0;
-  text-align: left;
-  font-size: 1.5rem;
-  line-height: 2rem; }
-
-img {
-  overflow: hidden;
-  max-width: 100%;
-  height: auto; }
-
+/* ------------------------------------------
+MAKE ME BEM!!!!!
+-------------------------------------------*/
 a.button-mini, a.call-to-action {
   display: inline-block;
   background-color: transparent;
@@ -86,9 +86,6 @@ a.call-to-action {
 .product-card:hover button {
   color: #ffffff;
   background-color: #F1C195; }
-
-section {
-  padding: 6rem 0; }
 
 @media only screen and (min-width: 320px) {
   .xs-card-one {
@@ -146,29 +143,68 @@ section {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 3rem 3rem; } }
 
-section.search {
-  padding: 4rem 0 0rem;
-  margin-bottom: -2rem; }
-  section.search .searchbar {
-    border: 0.095rem #F1C195 solid;
-    border-radius: 2rem;
-    height: 3rem;
-    width: 80%;
-    margin: 0 auto;
+.baking .card {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 0rem 1rem; }
+  .baking .card .image {
+    margin-bottom: 0.5rem; }
+  .baking .card p.description {
+    font-size: 1rem; }
+
+.about-us {
+  background-color: #fcfcfc; }
+  .about-us .card {
+    align-items: center;
     display: grid;
-    padding: 0; }
-    section.search .searchbar .search-icon {
-      justify-self: end;
-      background-image: url("../img/icon_search.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 99% 99%;
-      width: 3rem;
-      height: 100%; }
+    grid-template-columns: 1fr 2.5fr;
+    gap: 0rem 2rem;
+    margin-bottom: 1rem; }
+    .about-us .card p {
+      font-size: 1rem;
+      text-align: right; }
+    .about-us .card .image {
+      justify-self: center; }
+    .about-us .card:nth-child(even) {
+      grid-template-columns: 2.5fr 1fr; }
+      .about-us .card:nth-child(even) .image {
+        order: 2; }
+      .about-us .card:nth-child(even) p {
+        order: 1;
+        text-align: left; }
+
+@media only screen and (min-width: 600px) {
+  .about-us .card {
+    grid-template-columns: 1fr 2fr;
+    gap: 0rem 3rem;
+    margin-bottom: 3rem; }
+    .about-us .card:nth-child(even) {
+      grid-template-columns: 2fr 1fr; }
+    .about-us .card p {
+      font-size: 1.2rem; } }
 
 @media only screen and (min-width: 900px) {
-  section.search .searchbar {
-    width: 50%; } }
+  .baking .card {
+    grid-template-columns: 1fr;
+    gap: 0rem 4rem; }
+    .baking .card .image {
+      margin-bottom: 0.5rem; }
+    .baking .card .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0rem 1rem; }
+      .baking .card .details p {
+        display: none; }
+    .baking .card:last-child {
+      display: none; }
+  .about-us .card {
+    grid-template-columns: 1fr 2.5fr;
+    gap: 0rem 4rem;
+    margin-bottom: 4rem; }
+    .about-us .card:nth-child(even) {
+      grid-template-columns: 2.5fr 1fr; }
+    .about-us .card p {
+      font-size: 1.5rem; } }
 
 /* ------------------------------------------
 FOOTER
@@ -190,7 +226,8 @@ FOOTER
 
 .footer-content__text {
   color: #616161;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  list-style-type: none; }
   @media only screen and (min-width: 900px) {
     .footer-content__text {
       font-size: 1.5rem; } }
@@ -380,80 +417,61 @@ NAVIGATION
   content: "\25B8\0020"; }
 
 /* ------------------------------------------
+SECTION-PRIMARY
+-------------------------------------------*/
+.section-primary {
+  padding: 6rem 0; }
+
+.section-primary__title {
+  color: #616161;
+  font-size: 2rem;
+  margin: 0 auto 2rem;
+  text-align: center; }
+  @media only screen and (min-width: 900px) {
+    .section-primary__title {
+      font-size: 2.5rem; } }
+
+.section-primary__text-intro {
+  color: #616161;
+  font-size: 1.2rem;
+  margin: 0 auto 3rem;
+  text-align: center; }
+  @media only screen and (min-width: 900px) {
+    .section-primary__text-intro {
+      font-size: 1.5rem;
+      max-width: 90%; } }
+  .section-primary__text-intro a {
+    color: #616161;
+    transition: all 0.3s;
+    text-decoration: underline; }
+    .section-primary__text-intro a:hover {
+      color: #F1C195; }
+
+/* ------------------------------------------
 the BEM stops here
 -------------------------------------------*/
-.baking .card {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 0rem 1rem; }
-  .baking .card .image {
-    margin-bottom: 0.5rem; }
-  .baking .card p.description {
-    font-size: 1rem; }
-
-.about-us {
-  background-color: #fcfcfc; }
-  .about-us .card {
-    align-items: center;
+section.search {
+  padding: 4rem 0 0rem;
+  margin-bottom: -2rem; }
+  section.search .searchbar {
+    border: 0.095rem #F1C195 solid;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 80%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    gap: 0rem 2rem;
-    margin-bottom: 1rem; }
-    .about-us .card p {
-      font-size: 1rem;
-      text-align: right; }
-    .about-us .card .image {
-      justify-self: center; }
-    .about-us .card:nth-child(even) {
-      grid-template-columns: 2.5fr 1fr; }
-      .about-us .card:nth-child(even) .image {
-        order: 2; }
-      .about-us .card:nth-child(even) p {
-        order: 1;
-        text-align: left; }
-
-.our-recipies {
-  background: url(../img/background-our-recipies.jpg) no-repeat;
-  background-size: cover; }
-
-@media only screen and (min-width: 600px) {
-  .about-us .card {
-    grid-template-columns: 1fr 2fr;
-    gap: 0rem 3rem;
-    margin-bottom: 3rem; }
-    .about-us .card:nth-child(even) {
-      grid-template-columns: 2fr 1fr; }
-    .about-us .card p {
-      font-size: 1.2rem; } }
-
-@media only screen and (min-width: 900px) {
-  .baking .card {
-    grid-template-columns: 1fr;
-    gap: 0rem 4rem; }
-    .baking .card .image {
-      margin-bottom: 0.5rem; }
-    .baking .card .details {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0rem 1rem; }
-      .baking .card .details p {
-        display: none; }
-    .baking .card:last-child {
-      display: none; }
-  .about-us .card {
-    grid-template-columns: 1fr 2.5fr;
-    gap: 0rem 4rem;
-    margin-bottom: 4rem; }
-    .about-us .card:nth-child(even) {
-      grid-template-columns: 2.5fr 1fr; }
-    .about-us .card p {
-      font-size: 1.5rem; } }
-
-body#about-us a.nav-about {
-  border-bottom: 0.15rem solid #F1C195; }
-
-#our-recipies a.nav-recipies {
-  border-bottom: 0.15rem solid #F1C195; }
+    padding: 0; }
+    @media only screen and (min-width: 900px) {
+      section.search .searchbar {
+        width: 50%; } }
+    section.search .searchbar .search-icon {
+      justify-self: end;
+      background-image: url("../img/icon_search.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 99% 99%;
+      width: 3rem;
+      height: 100%; }
 
 #our-recipies.our-recipies-sub-page .recipie-container {
   display: grid;
@@ -489,10 +507,6 @@ body#about-us a.nav-about {
 
 #our-recipies.our-recipies-sub-page .your-baking-photos {
   background-color: #fcfcfc; }
-
-#our-recipies.our-recipies-sub-page .our-recipies {
-  background: url(../img/background-our-recipies.jpg) no-repeat;
-  background-size: cover; }
 
 #our-recipies section.our-recipies {
   background: none; }
