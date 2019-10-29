@@ -1,22 +1,3 @@
-nav {
-	position: absolute;
-	padding: 1rem 0.5rem 0 0;
-	right: 0;
-	top: 0;
-	a {
-		display: block;
-		text-align: right;
-		margin: 0.5rem 0.5rem 1rem;
-		color: $brand;
-		font-size: 0.7rem;
-		text-transform: uppercase;
-		transition: all 0.3s;
-		&:hover.nav-about, &:hover.nav-recipies, &:hover.nav-shop {
-			border-bottom: 0.15rem solid $brand;
-		}
-	}
-}
-
 section.search {
 	padding: 4rem 0 0rem;
 	margin-bottom:  -2rem;
@@ -40,34 +21,7 @@ section.search {
 	}
 }
 
-
-
-@include breakpoint( $break-s ) {
-	nav {
-		a {
-			display: inline;
-			text-align: center;
-			margin: 0.75rem;
-			&.nav-shop {
-				border: 0.15rem solid $brand;
-				border-radius: 0.5rem;
-				padding: 0.5rem 1rem;
-				&:hover {
-					background-color: $brand;
-					color: $white;
-				}
-			}
-		}
-	}
-}
-
 @include breakpoint( $break-m ) {
-	nav {
-		padding: 2rem 1rem 0 0;
-		a {
-			font-size: 1rem;
-		}
-	}
 	section.search {
 		.searchbar {
 			width: 50%;

@@ -169,6 +169,13 @@ LOGO
 .logo {
 	width: 4rem;
 	margin: 1rem 2vw;
+	@include breakpoint( $break-xs ) {
+		width: 5rem;
+	}
+	@include breakpoint( $break-s ) {
+		width: 6rem;
+		margin: 2rem 3vw;
+	}
 	@include breakpoint( $break-m ) {
 		width: 8rem;
 		margin: 2rem 3vw;
@@ -183,6 +190,70 @@ LOGO
 		}
 	}
 
+
+/* ------------------------------------------
+NAVIGATION
+-------------------------------------------*/
+
+	.navigation {
+		position: absolute;
+		padding: 1rem 0.5rem 0 0;
+		right: 0;
+		top: 0;
+		@include breakpoint( $break-s ) {
+			margin: 2rem 3vw;
+		}
+	}
+
+	.navigation__link {
+		color: $brand;
+		display: block;
+		margin: 0 0.5rem 0.5rem;
+		text-align: right;
+		transition: all 0.3s;
+		&:hover {
+			color: $white;
+		}
+		@include breakpoint( $break-xs ) {
+			font-size: 1.3rem;
+		}
+		@include breakpoint( $break-s ) {
+			display: inline;
+			font-size: 1rem;
+			margin: 0	0 0 1.5rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		@include breakpoint( $break-m ) {
+			margin: 0 0 0 2rem
+		}
+		@include breakpoint( $break-l ) {
+			margin: 0 0 0 3rem
+		}
+	}
+
+	.navigation__link--shop {
+		@include breakpoint( $break-s ) {
+			border: 0.15rem solid $brand;
+			border-radius: 0.5rem;
+			padding: 0.5rem 1rem;
+			&:hover {
+				background-color: $brand;
+				color: $white;
+			}
+			@include breakpoint( $break-s ) {
+				&:before {
+					content: "" !important;
+				}
+			}
+		}
+	}
+
+	.navigation__link--selected {
+		&:before {
+			content: "\25B8\0020";
+		}
+	}
 
 /* ------------------------------------------
 the BEM stops here
