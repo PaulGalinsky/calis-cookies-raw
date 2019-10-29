@@ -4,20 +4,6 @@ header {
 	position: absolute;
 	top: 0;
 	left: 0;
-
-	div.logo {
-		width: 4rem;
-		margin: 1rem 2vw;
-		img {
-			opacity: 1;
-			transition: all 0.3s;
-			transform: rotate(-7deg);
-			&:hover {
-				transform: scale(1.05, 1.05);
-				transform: rotate(353deg);
-			}
-		}
-	}
 }
 
 nav {
@@ -64,87 +50,6 @@ section.search {
 
 
 
-
-
-
-// footer {
-// 	width: 100%;
-// 	border-top: 0.5rem solid $brand;
-// 	padding: 4rem 0;
-
-// 	.container {
-// 		display: grid;
-// 		grid-template-columns: 83% 17%;
-// 		@include breakpoint( $break-s ) {
-// 			grid-template-columns: 75% 25%;
-// 		}
-// 		.details {
-// 			@include breakpoint( $break-m ) {
-// 				li, p {
-// 					font-size: 1.5rem;
-// 				}
-// 			}
-// 			.contact-details {
-// 				margin-bottom: 1rem;
-// 				li:nth-child(2){
-// 					margin-bottom: 1rem;
-// 				}
-// 				span.postcode {
-// 					white-space:nowrap;
-// 				}
-// 			}
-// 			.sm-section {
-// 				.social-media-links {
-// 					margin-top: 0.5rem;
-// 					li {
-// 						margin-right: 0.5rem;
-// 						display: inline;
-// 						&:last-child {
-// 							margin-right: 0;
-// 						}
-// 						a {
-// 							img {
-// 								transition: all 0.3s;
-// 							}
-// 							&:hover {
-// 								filter: grayscale(100%);
-// 								img {
-// 									transform: scale(1.05, 1.05);
-// 									transform: rotate(360deg);
-// 								}
-// 							}
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.map {
-// 		display: grid;
-// 		.map-image {
-// 			justify-self: end;
-// 			width: 100%;
-// 			img {
-// 				transition: all 0.3s;
-// 				border: 0.25rem solid transparent;
-// 				&:hover {
-// 					border: 0.25rem solid $brand;
-// 					border-radius: 0.5rem;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-
-
-
-
-
-
-
-
-
 @include breakpoint( $break-s ) {
 	nav {
 		a {
@@ -165,12 +70,6 @@ section.search {
 }
 
 @include breakpoint( $break-m ) {
-	header {
-		div.logo {
-			width: 8rem;
-			margin: 2rem 3vw;
-		}
-	}
 	nav {
 		padding: 2rem 1rem 0 0;
 		a {

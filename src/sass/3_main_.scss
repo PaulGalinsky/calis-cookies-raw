@@ -150,6 +150,29 @@ HERO
 
 
 /* ------------------------------------------
+LOGO
+-------------------------------------------*/
+
+
+.logo {
+	width: 4rem;
+	margin: 1rem 2vw;
+	@include breakpoint( $break-m ) {
+		width: 8rem;
+		margin: 2rem 3vw;
+	}
+}
+
+.logo__image {
+		transition: all 0.3s;
+		transform: rotate(-7deg);
+		&:hover {
+			transform: rotate(353deg);
+		}
+	}
+
+
+/* ------------------------------------------
 the BEM stops here
 -------------------------------------------*/
 

@@ -152,16 +152,6 @@ header {
   position: absolute;
   top: 0;
   left: 0; }
-  header div.logo {
-    width: 4rem;
-    margin: 1rem 2vw; }
-    header div.logo img {
-      opacity: 1;
-      transition: all 0.3s;
-      transform: rotate(-7deg); }
-      header div.logo img:hover {
-        transform: scale(1.05, 1.05);
-        transform: rotate(353deg); }
 
 nav {
   position: absolute;
@@ -213,9 +203,6 @@ section.search {
         color: #ffffff; } }
 
 @media only screen and (min-width: 900px) {
-  header div.logo {
-    width: 8rem;
-    margin: 2rem 3vw; }
   nav {
     padding: 2rem 1rem 0 0; }
     nav a {
@@ -339,6 +326,23 @@ HERO
   @media only screen and (min-width: 900px) {
     .hero__text-intro--home {
       font-size: 2rem; } }
+
+/* ------------------------------------------
+LOGO
+-------------------------------------------*/
+.logo {
+  width: 4rem;
+  margin: 1rem 2vw; }
+  @media only screen and (min-width: 900px) {
+    .logo {
+      width: 8rem;
+      margin: 2rem 3vw; } }
+
+.logo__image {
+  transition: all 0.3s;
+  transform: rotate(-7deg); }
+  .logo__image:hover {
+    transform: rotate(353deg); }
 
 /* ------------------------------------------
 the BEM stops here
