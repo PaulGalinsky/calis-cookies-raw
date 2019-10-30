@@ -173,6 +173,51 @@ HERO
 
 
 /* ------------------------------------------
+INGREDIENTS
+-------------------------------------------*/
+
+
+.ingredients {
+	background-color: #fcfcfc;
+	padding: 2rem;
+	@include breakpoint( $break-m ) {
+		border-radius: 0 0 1rem 1rem;
+		align-self: start;
+		margin-top:	-6rem;
+		padding: 4rem 0 2rem;
+		text-align: center;
+	}
+}
+
+.ingredients__heading {
+	color: $dark;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.ingredients__list-item {
+	color: $dark;
+	display: inline;
+	font-size: 1.2rem;
+	&:after {
+		content: ',';
+	}
+	&:last-child:after {
+		content:'.';
+	}
+	@include breakpoint( $break-m ) {
+		display: block;
+		&:after {
+			content: '';
+		}
+		&:last-child:after {
+			content:'';
+		}
+	}
+}
+
+
+/* ------------------------------------------
 LOGO
 -------------------------------------------*/
 
@@ -268,6 +313,37 @@ NAVIGATION
 	}
 
 
+
+/* ------------------------------------------
+RECIPIE
+-------------------------------------------*/
+
+
+.recipie {
+
+}
+
+.recipie__heading {
+	color: $dark;
+	font-size: 2rem;
+	margin: -2rem auto 2rem;
+	text-align: center;
+	@include breakpoint( $break-m ) {
+		font-size: 2.5rem;
+	}
+}
+
+.recipie__text {
+	color: $dark;
+	font-size: 1.2rem;
+	margin-bottom: 1.2rem;
+	@include breakpoint( $break-m ) {
+		font-size: 1.5rem;
+	}
+}
+
+
+
 /* ------------------------------------------
 SEARCHBAR
 -------------------------------------------*/
@@ -306,11 +382,6 @@ SECTION-PRIMARY
 	padding: 6rem 0;
 }
 
-.section-primary--search {
-	padding: 4rem 0 0rem;
-	margin-bottom:  -2rem;
-}
-
 .section-primary__title {
 	color: $dark;
 	font-size: 2rem;
@@ -339,5 +410,20 @@ SECTION-PRIMARY
 			color: $brand;
 		}
 	}
+}
+
+.section-primary--recipie-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 4rem 0;
+	@include breakpoint( $break-m ) {
+		grid-template-columns: 4fr 2fr;
+		gap: 0rem 4rem;
+	}
+}
+
+.section-primary--search {
+	padding: 4rem 0 0rem;
+	margin-bottom:  -2rem;
 }
 

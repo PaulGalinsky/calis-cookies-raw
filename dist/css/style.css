@@ -341,6 +341,41 @@ HERO
       font-size: 2rem; } }
 
 /* ------------------------------------------
+INGREDIENTS
+-------------------------------------------*/
+.ingredients {
+  background-color: #fcfcfc;
+  padding: 2rem; }
+  @media only screen and (min-width: 900px) {
+    .ingredients {
+      border-radius: 0 0 1rem 1rem;
+      align-self: start;
+      margin-top: -6rem;
+      padding: 4rem 0 2rem;
+      text-align: center; } }
+
+.ingredients__heading {
+  color: #616161;
+  text-align: center;
+  font-size: 1.5rem; }
+
+.ingredients__list-item {
+  color: #616161;
+  display: inline;
+  font-size: 1.2rem; }
+  .ingredients__list-item:after {
+    content: ','; }
+  .ingredients__list-item:last-child:after {
+    content: '.'; }
+  @media only screen and (min-width: 900px) {
+    .ingredients__list-item {
+      display: block; }
+      .ingredients__list-item:after {
+        content: ''; }
+      .ingredients__list-item:last-child:after {
+        content: ''; } }
+
+/* ------------------------------------------
 LOGO
 -------------------------------------------*/
 .logo {
@@ -417,6 +452,26 @@ NAVIGATION
   content: "\25B8\0020"; }
 
 /* ------------------------------------------
+RECIPIE
+-------------------------------------------*/
+.recipie__heading {
+  color: #616161;
+  font-size: 2rem;
+  margin: -2rem auto 2rem;
+  text-align: center; }
+  @media only screen and (min-width: 900px) {
+    .recipie__heading {
+      font-size: 2.5rem; } }
+
+.recipie__text {
+  color: #616161;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem; }
+  @media only screen and (min-width: 900px) {
+    .recipie__text {
+      font-size: 1.5rem; } }
+
+/* ------------------------------------------
 SEARCHBAR
 -------------------------------------------*/
 .searchbar {
@@ -446,10 +501,6 @@ SECTION-PRIMARY
 .section-primary {
   padding: 6rem 0; }
 
-.section-primary--search {
-  padding: 4rem 0 0rem;
-  margin-bottom: -2rem; }
-
 .section-primary__title {
   color: #616161;
   font-size: 2rem;
@@ -475,43 +526,15 @@ SECTION-PRIMARY
     .section-primary__text-intro a:hover {
       color: #F1C195; }
 
-#our-recipies.our-recipies-sub-page .recipie-container {
+.section-primary--recipie-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem 0; }
-  #our-recipies.our-recipies-sub-page .recipie-container .ingredients {
-    background-color: #fcfcfc;
-    padding: 2rem; }
-    #our-recipies.our-recipies-sub-page .recipie-container .ingredients h3 {
-      text-align: center; }
-    #our-recipies.our-recipies-sub-page .recipie-container .ingredients li {
-      display: inline; }
-      #our-recipies.our-recipies-sub-page .recipie-container .ingredients li:after {
-        content: ','; }
-      #our-recipies.our-recipies-sub-page .recipie-container .ingredients li:last-child:after {
-        content: '.'; }
   @media only screen and (min-width: 900px) {
-    #our-recipies.our-recipies-sub-page .recipie-container {
+    .section-primary--recipie-container {
       grid-template-columns: 4fr 2fr;
-      gap: 0rem 4rem; }
-      #our-recipies.our-recipies-sub-page .recipie-container .ingredients {
-        border-radius: 0 0 1rem 1rem;
-        align-self: start;
-        margin-top: -6rem;
-        padding: 4rem 0 2rem;
-        text-align: center; }
-        #our-recipies.our-recipies-sub-page .recipie-container .ingredients li {
-          display: block; }
-          #our-recipies.our-recipies-sub-page .recipie-container .ingredients li:after {
-            content: ''; }
-          #our-recipies.our-recipies-sub-page .recipie-container .ingredients li:last-child:after {
-            content: ''; } }
+      gap: 0rem 4rem; } }
 
-#our-recipies.our-recipies-sub-page .your-baking-photos {
-  background-color: #fcfcfc; }
-
-#our-recipies section.our-recipies {
-  background: none; }
-
-#our-recipies section.baking {
-  background-color: #fcfcfc; }
+.section-primary--search {
+  padding: 4rem 0 0rem;
+  margin-bottom: -2rem; }
