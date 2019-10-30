@@ -417,10 +417,38 @@ NAVIGATION
   content: "\25B8\0020"; }
 
 /* ------------------------------------------
+SEARCHBAR
+-------------------------------------------*/
+.searchbar {
+  border: 0.095rem #F1C195 solid;
+  border-radius: 2rem;
+  display: grid;
+  height: 3rem;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%; }
+  @media only screen and (min-width: 900px) {
+    .searchbar {
+      width: 50%; } }
+
+.searchbar__search-icon {
+  background-image: url("../img/icon_search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 99% 99%;
+  height: 100%;
+  justify-self: end;
+  width: 3rem; }
+
+/* ------------------------------------------
 SECTION-PRIMARY
 -------------------------------------------*/
 .section-primary {
   padding: 6rem 0; }
+
+.section-primary--search {
+  padding: 4rem 0 0rem;
+  margin-bottom: -2rem; }
 
 .section-primary__title {
   color: #616161;
@@ -446,32 +474,6 @@ SECTION-PRIMARY
     text-decoration: underline; }
     .section-primary__text-intro a:hover {
       color: #F1C195; }
-
-/* ------------------------------------------
-the BEM stops here
--------------------------------------------*/
-section.search {
-  padding: 4rem 0 0rem;
-  margin-bottom: -2rem; }
-  section.search .searchbar {
-    border: 0.095rem #F1C195 solid;
-    border-radius: 2rem;
-    height: 3rem;
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    padding: 0; }
-    @media only screen and (min-width: 900px) {
-      section.search .searchbar {
-        width: 50%; } }
-    section.search .searchbar .search-icon {
-      justify-self: end;
-      background-image: url("../img/icon_search.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 99% 99%;
-      width: 3rem;
-      height: 100%; }
 
 #our-recipies.our-recipies-sub-page .recipie-container {
   display: grid;

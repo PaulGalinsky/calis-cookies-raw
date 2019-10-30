@@ -269,12 +269,46 @@ NAVIGATION
 
 
 /* ------------------------------------------
+SEARCHBAR
+-------------------------------------------*/
+
+
+.searchbar {
+	border: .095rem $brand solid;
+	border-radius: 2rem;
+	display: grid;
+	height: 3rem;
+	margin: 0 auto;
+	padding: 0;
+	width: 80%;
+	@include breakpoint( $break-m ) {
+		width: 50%;
+	}
+}
+
+.searchbar__search-icon {
+	background-image: url("../img/icon_search.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 99% 99%;
+	height: 100%;
+	justify-self: end;
+	width: 3rem;
+}
+
+
+/* ------------------------------------------
 SECTION-PRIMARY
 -------------------------------------------*/
 
 
 .section-primary {
 	padding: 6rem 0;
+}
+
+.section-primary--search {
+	padding: 4rem 0 0rem;
+	margin-bottom:  -2rem;
 }
 
 .section-primary__title {
@@ -306,49 +340,4 @@ SECTION-PRIMARY
 		}
 	}
 }
-
-
-/* ------------------------------------------
-the BEM stops here
--------------------------------------------*/
-
-
-
-
-section.search {
-	padding: 4rem 0 0rem;
-	margin-bottom:  -2rem;
-	.searchbar {
-		border: .095rem $brand solid;
-		border-radius: 2rem;
-		height: 3rem;
-		width: 80%;
-		margin: 0 auto;
-		display: grid;
-		padding: 0;
-		@include breakpoint( $break-m ) {
-			width: 50%;
-		}
-
-		.search-icon {
-			justify-self: end;
-			background-image: url("../img/icon_search.svg");
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: 99% 99%;
-			width: 3rem;
-			height: 100%;
-		}
-	}
-}
-
-
-
-
-
-
-
-
-
-
 
