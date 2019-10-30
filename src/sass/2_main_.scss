@@ -1,4 +1,63 @@
 /* ------------------------------------------
+ABOUT-US
+-------------------------------------------*/
+
+.about-us {
+	background-color: $light-background;
+}
+
+.about-us__card {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 2.5fr;
+	gap: 0rem 2rem;
+	margin-bottom: 2rem;
+	@include breakpoint( $break-s ) {
+		grid-template-columns: 1fr 2fr;
+		gap: 0rem 3rem;
+		margin-bottom: 3rem;
+	}
+	@include breakpoint ( $break-m ) {
+		grid-template-columns: 1fr 2.5fr;
+		gap: 0rem 4rem;
+		margin-bottom: 4rem;
+	}
+	&:nth-child(even) {
+		grid-template-columns: 2.5fr 1fr;
+		@include breakpoint( $break-s ) {
+			grid-template-columns: 2fr 1fr;
+		}
+		@include breakpoint( $break-m ) {
+			grid-template-columns: 2.5fr 1fr;
+		}
+		.about-us__text {
+			order: 1;
+			text-align: left;
+		}
+		.about-us__image {
+			order: 2;
+		}
+	}
+}
+
+.about-us__image {
+	justify-self: center;
+}
+
+.about-us__text {
+	font-size: 1rem;
+	color: $dark;
+	text-align: right;
+	@include breakpoint( $break-s ) {
+		font-size: 1.2rem;
+	}
+	@include breakpoint( $break-m ) {
+		font-size: 1.5rem;
+	}
+}
+
+
+/* ------------------------------------------
 FOOTER
 -------------------------------------------*/
 

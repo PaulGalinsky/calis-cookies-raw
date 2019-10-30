@@ -37,6 +37,9 @@ HELPER CLASSES
     .container {
       width: 86%; } }
 
+.grid {
+  display: grid; }
+
 /* ------------------------------------------
 MAKE ME BEM!!!!!
 -------------------------------------------*/
@@ -63,9 +66,6 @@ a.call-to-action {
   padding: 0.5rem 2rem;
   margin: 4rem auto 0;
   justify-self: center; }
-
-.grid {
-  display: grid; }
 
 .grid-card {
   display: grid;
@@ -152,37 +152,6 @@ a.call-to-action {
   .baking .card p.description {
     font-size: 1rem; }
 
-.about-us {
-  background-color: #fcfcfc; }
-  .about-us .card {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    gap: 0rem 2rem;
-    margin-bottom: 1rem; }
-    .about-us .card p {
-      font-size: 1rem;
-      text-align: right; }
-    .about-us .card .image {
-      justify-self: center; }
-    .about-us .card:nth-child(even) {
-      grid-template-columns: 2.5fr 1fr; }
-      .about-us .card:nth-child(even) .image {
-        order: 2; }
-      .about-us .card:nth-child(even) p {
-        order: 1;
-        text-align: left; }
-
-@media only screen and (min-width: 600px) {
-  .about-us .card {
-    grid-template-columns: 1fr 2fr;
-    gap: 0rem 3rem;
-    margin-bottom: 3rem; }
-    .about-us .card:nth-child(even) {
-      grid-template-columns: 2fr 1fr; }
-    .about-us .card p {
-      font-size: 1.2rem; } }
-
 @media only screen and (min-width: 900px) {
   .baking .card {
     grid-template-columns: 1fr;
@@ -196,14 +165,56 @@ a.call-to-action {
       .baking .card .details p {
         display: none; }
     .baking .card:last-child {
-      display: none; }
-  .about-us .card {
-    grid-template-columns: 1fr 2.5fr;
-    gap: 0rem 4rem;
-    margin-bottom: 4rem; }
-    .about-us .card:nth-child(even) {
-      grid-template-columns: 2.5fr 1fr; }
-    .about-us .card p {
+      display: none; } }
+
+/* ------------------------------------------
+ABOUT-US
+-------------------------------------------*/
+.about-us {
+  background-color: #fcfcfc; }
+
+.about-us__card {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 0rem 2rem;
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 600px) {
+    .about-us__card {
+      grid-template-columns: 1fr 2fr;
+      gap: 0rem 3rem;
+      margin-bottom: 3rem; } }
+  @media only screen and (min-width: 900px) {
+    .about-us__card {
+      grid-template-columns: 1fr 2.5fr;
+      gap: 0rem 4rem;
+      margin-bottom: 4rem; } }
+  .about-us__card:nth-child(even) {
+    grid-template-columns: 2.5fr 1fr; }
+    @media only screen and (min-width: 600px) {
+      .about-us__card:nth-child(even) {
+        grid-template-columns: 2fr 1fr; } }
+    @media only screen and (min-width: 900px) {
+      .about-us__card:nth-child(even) {
+        grid-template-columns: 2.5fr 1fr; } }
+    .about-us__card:nth-child(even) .about-us__text {
+      order: 1;
+      text-align: left; }
+    .about-us__card:nth-child(even) .about-us__image {
+      order: 2; }
+
+.about-us__image {
+  justify-self: center; }
+
+.about-us__text {
+  font-size: 1rem;
+  color: #616161;
+  text-align: right; }
+  @media only screen and (min-width: 600px) {
+    .about-us__text {
+      font-size: 1.2rem; } }
+  @media only screen and (min-width: 900px) {
+    .about-us__text {
       font-size: 1.5rem; } }
 
 /* ------------------------------------------

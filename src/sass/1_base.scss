@@ -2,10 +2,11 @@
 COLORS
 -------------------------------------------*/
 
-
-$dark: #616161;
-$white: #ffffff;
 $brand: #F1C195;
+$dark: #616161;
+$light-background: #fcfcfc;
+$white: #ffffff;
+
 
 
 /* ------------------------------------------
@@ -65,10 +66,9 @@ HELPER CLASSES
 	}
 }
 
-
-
-
-
+.grid {
+	display: grid;
+}
 
 
 /* ------------------------------------------
@@ -105,9 +105,7 @@ a.call-to-action {
 
 
 
-.grid {
-	display: grid;
-}
+
 
 .grid-card {
 	display: grid;
@@ -232,65 +230,7 @@ a.call-to-action {
 			font-size: 1rem;
 		}
 	}
-}
-
-
-
-
-
-
-
-.about-us {
-	background-color: #fcfcfc;
-	.card {
-		align-items: center;
-		display: grid;
-		grid-template-columns: 1fr 2.5fr;
-		gap: 0rem 2rem;
-		margin-bottom: 1rem;
-		p {
-			font-size: 1rem;
-			text-align: right;
-		}
-		.image {
-			justify-self: center;
-		}
-		&:nth-child(even){
-			grid-template-columns: 2.5fr 1fr;
-			.image {
-				order: 2;
-			}
-			p {
-				order: 1;
-				text-align: left;
-			}
-		}
-	}
-}
-
-
-
-
-
-@include breakpoint( $break-s ) {
-	.about-us {
-		.card {
-			grid-template-columns: 1fr 2fr;
-			gap: 0rem 3rem;
-			margin-bottom: 3rem;
-			&:nth-child(even){
-				grid-template-columns: 2fr 1fr;
-			}
-			p {
-				font-size: 1.2rem;
-			}
-		}
-	}
-}
-
-@include breakpoint( $break-m ) {
-
-	.baking {
+	@include breakpoint( $break-m ) {
 		.card {
 			grid-template-columns: 1fr;
 			gap: 0rem 4rem;
@@ -310,21 +250,60 @@ a.call-to-action {
 			}
 		}
 	}
-
-	.about-us {
-		.card {
-			grid-template-columns: 1fr 2.5fr;
-			gap: 0rem 4rem;
-			margin-bottom: 4rem;
-			&:nth-child(even){
-				grid-template-columns: 2.5fr 1fr;
-			}
-			p {
-				font-size: 1.5rem;
-			}
-		}
-	}
 }
 
 
 
+// .about-us {
+// 	background-color: #fcfcfc;
+// 	.card {
+// 		align-items: center;
+// 		display: grid;
+// 		grid-template-columns: 1fr 2.5fr;
+// 		gap: 0rem 2rem;
+// 		margin-bottom: 1rem;
+// 		p {
+// 			font-size: 1rem;
+// 			text-align: right;
+// 		}
+// 		.image {
+// 			justify-self: center;
+// 		}
+// 		&:nth-child(even){
+// 			grid-template-columns: 2.5fr 1fr;
+// 			.image {
+// 				order: 2;
+// 			}
+// 			p {
+// 				order: 1;
+// 				text-align: left;
+// 			}
+// 		}
+// 	}
+// 	@include breakpoint( $break-s ) {
+// 		.card {
+// 			grid-template-columns: 1fr 2fr;
+// 			gap: 0rem 3rem;
+// 			margin-bottom: 3rem;
+// 			&:nth-child(even){
+// 				grid-template-columns: 2fr 1fr;
+// 			}
+// 			p {
+// 				font-size: 1.2rem;
+// 			}
+// 		}
+// 	}
+// 	@include breakpoint( $break-m ) {
+// 		.card {
+// 			grid-template-columns: 1fr 2.5fr;
+// 			gap: 0rem 4rem;
+// 			margin-bottom: 4rem;
+// 			&:nth-child(even){
+// 				grid-template-columns: 2.5fr 1fr;
+// 			}
+// 			p {
+// 				font-size: 1.5rem;
+// 			}
+// 		}
+// 	}
+// }
