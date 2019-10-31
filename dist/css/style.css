@@ -43,106 +43,6 @@ HELPER CLASSES
 /* ------------------------------------------
 MAKE ME BEM!!!!!
 -------------------------------------------*/
-.grid-card {
-  display: grid;
-  align-items: start; }
-
-.product-card img {
-  margin-bottom: 0.5rem; }
-
-.product-card img, .product-card h3 a {
-  transition: all 0.3s; }
-
-.product-card:hover img {
-  transform: scale(1.01); }
-
-.product-card:hover h3 a {
-  color: #F1C195; }
-
-.product-card:hover button {
-  color: #ffffff;
-  background-color: #F1C195; }
-
-@media only screen and (min-width: 320px) {
-  .xs-card-one {
-    grid-template-columns: 1fr;
-    gap: 4rem 0rem; }
-  .xs-card-two {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem 1rem; }
-  .xs-card-three {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem 1rem; }
-  .xs-card-four {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem 1rem; } }
-
-@media only screen and (min-width: 600px) {
-  .s-card-one {
-    grid-template-columns: 1fr;
-    gap: 2rem 0rem; }
-  .s-card-two {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 2rem; }
-  .s-card-three {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem 2rem; }
-  .s-card-four {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem 1rem; } }
-
-@media only screen and (min-width: 900px) {
-  .m-card-one {
-    grid-template-columns: 1fr;
-    gap: 4rem 0rem; }
-  .m-card-two {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem 4rem; }
-  .m-card-three {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 4rem 4rem; }
-  .m-card-four {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2.5rem 2.5rem; } }
-
-@media only screen and (min-width: 1200px) {
-  .l-card-one {
-    grid-template-columns: 1fr;
-    gap: 4rem 0rem; }
-  .l-card-two {
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem 6rem; }
-  .l-card-three {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 6rem 6rem; }
-  .l-card-four {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3rem 3rem; } }
-
-.baking .card {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 0rem 1rem; }
-  .baking .card .image {
-    margin-bottom: 0.5rem; }
-  .baking .card p.description {
-    font-size: 1rem; }
-
-@media only screen and (min-width: 900px) {
-  .baking .card {
-    grid-template-columns: 1fr;
-    gap: 0rem 4rem; }
-    .baking .card .image {
-      margin-bottom: 0.5rem; }
-    .baking .card .details {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0rem 1rem; }
-      .baking .card .details p {
-        display: none; }
-    .baking .card:last-child {
-      display: none; } }
-
 /* ------------------------------------------
 ABOUT-US
 -------------------------------------------*/
@@ -463,6 +363,72 @@ NAVIGATION
 
 .navigation__link--selected:before {
   content: "\25B8\0020"; }
+
+/* ------------------------------------------
+PRODUCT-CARD
+-------------------------------------------*/
+.product-card {
+  display: grid; }
+
+.product-card__image-wrapper a img {
+  transition: all 0.3s; }
+  .product-card__image-wrapper a img:hover {
+    transform: scale(1.01); }
+
+.product-card__text {
+  color: #616161;
+  font-size: 1.2rem;
+  margin: 0.5rem 0; }
+  .product-card__text a {
+    color: #616161;
+    transition: all 0.3s; }
+    .product-card__text a:hover {
+      color: #F1C195; }
+
+.product-card__title {
+  color: #616161;
+  font-size: 1.2rem;
+  margin: 0.5rem 0; }
+  @media only screen and (min-width: 900px) {
+    .product-card__title {
+      font-size: 1.3rem; } }
+  @media only screen and (min-width: 1200px) {
+    .product-card__title {
+      font-size: 1.5rem; } }
+  .product-card__title a {
+    color: #616161;
+    transition: all 0.3s; }
+    .product-card__title a:hover {
+      color: #F1C195; }
+
+/* ------------------------------------------
+PRODUCT-GRID
+-------------------------------------------*/
+.product-grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 0rem 4rem; }
+
+@media only screen and (min-width: 320px) {
+  .product-grid--1-4 {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 1rem; } }
+
+@media only screen and (min-width: 600px) {
+  .product-grid--1-4 {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 2rem; } }
+
+@media only screen and (min-width: 900px) {
+  .product-grid--1-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5rem 2.5rem; } }
+
+@media only screen and (min-width: 1200px) {
+  .product-grid--1-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem 3rem; } }
 
 /* ------------------------------------------
 RECIPIE
