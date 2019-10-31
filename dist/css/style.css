@@ -43,30 +43,6 @@ HELPER CLASSES
 /* ------------------------------------------
 MAKE ME BEM!!!!!
 -------------------------------------------*/
-a.button-mini, a.call-to-action {
-  display: inline-block;
-  background-color: transparent;
-  color: #F1C195;
-  border: 0.15rem solid #F1C195;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-  transition: all 0.3s; }
-  a.button-mini:hover, a.call-to-action:hover {
-    background-color: #F1C195;
-    color: #ffffff; }
-
-a.button-mini {
-  font-size: 0.8rem;
-  padding: 0 0.5rem;
-  justify-self: end;
-  align-self: start; }
-
-a.call-to-action {
-  font-size: 1rem;
-  padding: 0.5rem 2rem;
-  margin: 4rem auto 0;
-  justify-self: center; }
-
 .grid-card {
   display: grid;
   align-items: start; }
@@ -216,6 +192,32 @@ ABOUT-US
   @media only screen and (min-width: 900px) {
     .about-us__text {
       font-size: 1.5rem; } }
+
+/* ------------------------------------------
+BUTTON
+-------------------------------------------*/
+.button {
+  background-color: transparent;
+  border: 0.15rem solid #F1C195;
+  border-radius: 0.5rem;
+  color: #F1C195;
+  display: inline-block;
+  font-size: 1rem;
+  justify-self: center;
+  margin: 4rem auto 0;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  transition: all 0.3s; }
+  .button:hover {
+    background-color: #F1C195;
+    color: #ffffff; }
+
+.button--mini {
+  align-self: start;
+  font-size: 0.8rem;
+  justify-self: end;
+  margin: 0;
+  padding: 0 0.5rem; }
 
 /* ------------------------------------------
 FOOTER

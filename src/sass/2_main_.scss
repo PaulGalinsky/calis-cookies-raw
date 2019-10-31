@@ -2,6 +2,7 @@
 ABOUT-US
 -------------------------------------------*/
 
+
 .about-us {
 	background-color: $light-background;
 }
@@ -58,8 +59,41 @@ ABOUT-US
 
 
 /* ------------------------------------------
+BUTTON
+-------------------------------------------*/
+
+.button {
+	background-color: transparent;
+	border: 0.15rem solid $brand;
+	border-radius: 0.5rem;
+	color: $brand;
+	display: inline-block;
+	font-size: 1rem;
+	justify-self: center;
+	margin: 4rem auto 0;
+	padding: 0.5rem 2rem;
+	text-transform: uppercase;
+	transition: all 0.3s;
+	&:hover {
+		background-color: $brand;
+		color: $white;
+	}
+}
+
+.button--mini {
+	align-self: start;
+	font-size: 0.8rem;
+	justify-self: end;
+	margin: 0;
+	padding: 0 0.5rem;
+}
+
+
+
+/* ------------------------------------------
 FOOTER
 -------------------------------------------*/
+
 
 .footer {
 	width: 100%;
