@@ -414,7 +414,23 @@ PRODUCT-CARD
 	display: grid;
 }
 
+.product-card--shop-preview {
+	align-items: start;
+	grid-template-columns: 1fr 2fr;
+	gap: 2rem 2rem;
+	@include breakpoint( $break-s ) {
+		grid-template-columns: 1fr;
+		gap: 0 0;
+	}
+	@include breakpoint( $break-m ) {
+		.product-card__text {
+			display:none;
+		}
+	}
+}
+
 .product-card__image-wrapper {
+	margin-bottom: 0.5rem;
 	a img {
 		transition: all 0.3s;
 		&:hover {
@@ -423,12 +439,9 @@ PRODUCT-CARD
 	}
 }
 
-.product-card__text-wrapper {
-}
-
 .product-card__text {
 	color: $dark;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	margin: 0.5rem 0;
 	a {
 		color: $dark;
@@ -441,8 +454,8 @@ PRODUCT-CARD
 
 .product-card__title {
 	color: $dark;
-	font-size: 1.2rem;
-	margin: 0.5rem 0;
+	font-size: 1.3rem;
+	margin-bottom: 0.5rem;
 	@include breakpoint( $break-m ) {
 		font-size: 1.3rem;
 	}
@@ -458,7 +471,6 @@ PRODUCT-CARD
 	}
 }
 
-
 /* ------------------------------------------
 PRODUCT-GRID
 -------------------------------------------*/
@@ -467,10 +479,21 @@ PRODUCT-GRID
 	display: grid;
 	align-items: start;
 	grid-template-columns: 1fr;
-	gap: 0rem 4rem;
+	gap: 2rem 0rem;
 }
 
-.product-grid--1-4 {
+.product-grid--11233 {
+	@include breakpoint( $break-s ) {
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem 2rem;
+	}
+	@include breakpoint( $break-m ) {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 4rem 4rem;
+	}
+}
+
+.product-grid--12244 {
 	@include breakpoint( $break-xs ) {
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem 1rem;
@@ -486,6 +509,15 @@ PRODUCT-GRID
 	@include breakpoint( $break-l ) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 3rem 3rem;
+	}
+}
+
+.product-grid--11233--teaser {
+	// removes the final element of a grid of four when grid drops to 3 columns at larger widths. Use in teaser layouts rather than lists of all products.
+	@include breakpoint( $break-m ) {
+		> :last-child {
+			display: none;
+		}
 	}
 }
 
@@ -598,3 +630,7 @@ SECTION-PRIMARY
 	margin-bottom:  -2rem;
 }
 
+
+/* ------------------------------------------
+END
+-------------------------------------------*/

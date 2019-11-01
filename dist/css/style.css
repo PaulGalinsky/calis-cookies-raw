@@ -41,7 +41,7 @@ HELPER CLASSES
   display: grid; }
 
 /* ------------------------------------------
-MAKE ME BEM!!!!!
+END
 -------------------------------------------*/
 /* ------------------------------------------
 ABOUT-US
@@ -370,14 +370,28 @@ PRODUCT-CARD
 .product-card {
   display: grid; }
 
-.product-card__image-wrapper a img {
-  transition: all 0.3s; }
-  .product-card__image-wrapper a img:hover {
-    transform: scale(1.01); }
+.product-card--shop-preview {
+  align-items: start;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem 2rem; }
+  @media only screen and (min-width: 600px) {
+    .product-card--shop-preview {
+      grid-template-columns: 1fr;
+      gap: 0 0; } }
+  @media only screen and (min-width: 900px) {
+    .product-card--shop-preview .product-card__text {
+      display: none; } }
+
+.product-card__image-wrapper {
+  margin-bottom: 0.5rem; }
+  .product-card__image-wrapper a img {
+    transition: all 0.3s; }
+    .product-card__image-wrapper a img:hover {
+      transform: scale(1.01); }
 
 .product-card__text {
   color: #616161;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0.5rem 0; }
   .product-card__text a {
     color: #616161;
@@ -387,8 +401,8 @@ PRODUCT-CARD
 
 .product-card__title {
   color: #616161;
-  font-size: 1.2rem;
-  margin: 0.5rem 0; }
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem; }
   @media only screen and (min-width: 900px) {
     .product-card__title {
       font-size: 1.3rem; } }
@@ -408,27 +422,41 @@ PRODUCT-GRID
   display: grid;
   align-items: start;
   grid-template-columns: 1fr;
-  gap: 0rem 4rem; }
-
-@media only screen and (min-width: 320px) {
-  .product-grid--1-4 {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem 1rem; } }
+  gap: 2rem 0rem; }
 
 @media only screen and (min-width: 600px) {
-  .product-grid--1-4 {
+  .product-grid--11233 {
     grid-template-columns: 1fr 1fr;
     gap: 4rem 2rem; } }
 
 @media only screen and (min-width: 900px) {
-  .product-grid--1-4 {
+  .product-grid--11233 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem 4rem; } }
+
+@media only screen and (min-width: 320px) {
+  .product-grid--12244 {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 1rem; } }
+
+@media only screen and (min-width: 600px) {
+  .product-grid--12244 {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 2rem; } }
+
+@media only screen and (min-width: 900px) {
+  .product-grid--12244 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2.5rem 2.5rem; } }
 
 @media only screen and (min-width: 1200px) {
-  .product-grid--1-4 {
+  .product-grid--12244 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 3rem 3rem; } }
+
+@media only screen and (min-width: 900px) {
+  .product-grid--11233--teaser > :last-child {
+    display: none; } }
 
 /* ------------------------------------------
 RECIPIE
@@ -517,3 +545,7 @@ SECTION-PRIMARY
 .section-primary--search {
   padding: 4rem 0 0rem;
   margin-bottom: -2rem; }
+
+/* ------------------------------------------
+END
+-------------------------------------------*/
