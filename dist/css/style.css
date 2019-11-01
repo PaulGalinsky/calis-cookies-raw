@@ -46,9 +46,6 @@ END
 /* ------------------------------------------
 ABOUT-US
 -------------------------------------------*/
-.about-us {
-  background-color: #fcfcfc; }
-
 .about-us__card {
   align-items: center;
   display: grid;
@@ -92,6 +89,20 @@ ABOUT-US
   @media only screen and (min-width: 900px) {
     .about-us__text {
       font-size: 1.5rem; } }
+
+/* ------------------------------------------
+BACKGROUND
+-------------------------------------------*/
+.background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.background--light {
+  background-color: #fcfcfc; }
+
+.background--texture {
+  background-image: url("../img/bg-texture-w.jpg"); }
 
 /* ------------------------------------------
 BUTTON

@@ -3,10 +3,6 @@ ABOUT-US
 -------------------------------------------*/
 
 
-.about-us {
-	background-color: $light-background;
-}
-
 .about-us__card {
 	align-items: center;
 	display: grid;
@@ -55,6 +51,27 @@ ABOUT-US
 	@include breakpoint( $break-m ) {
 		font-size: 1.5rem;
 	}
+}
+
+
+/* ------------------------------------------
+BACKGROUND
+-------------------------------------------*/
+
+
+.background {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.background--light {
+	background-color: $extra-light;
+}
+
+
+.background--texture {
+	background-image: url("../img/bg-texture-w.jpg");
 }
 
 
@@ -271,7 +288,7 @@ INGREDIENTS
 
 
 .ingredients {
-	background-color: #fcfcfc;
+	background-color: $extra-light;
 	padding: 2rem;
 	@include breakpoint( $break-m ) {
 		border-radius: 0 0 1rem 1rem;
