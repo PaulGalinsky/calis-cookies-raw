@@ -427,26 +427,6 @@ PRODUCT-CARD
 -------------------------------------------*/
 
 
-
-/* ------------------------------------------
-
-
-USED IN NON-SHOP AREAS
-product-card
-product-card--shop-preview
-product-card__image-wrapper
-product-card__text-wrapper
-product-card__title
-
-
-SHOP ONLY
-shop-card__order-wrapper
-
-
-
--------------------------------------------*/
-
-
 .product-card {
 	display: grid;
 }
@@ -694,31 +674,17 @@ SECTION-PRIMARY
 SHOP-CARD
 -------------------------------------------*/
 
-.shop-grid {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
 
 .shop-card {
+	background-color: $light;
 	flex: 0 1 100%;
-	margin-bottom: 2rem;
-
-
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 2rem 2rem;
+	margin-bottom: 3rem;
 	@include breakpoint( $break-s ) {
 		flex: 0 1 calc(50% - 1.5rem);
-		margin-bottom: 4rem;
-
-		grid-template-columns: 1fr;
-		gap: 0 0;
+		margin-bottom: 5rem;
 	}
 	@include breakpoint( $break-m ) {
 		flex: 0 1 calc(33.3% - 1.5rem);
-		margin-bottom: 5rem;
 	}
 	@include breakpoint( $break-m ) {
 		flex: 0 1 calc(33.3% - 2rem);
@@ -726,40 +692,80 @@ SHOP-CARD
 	}
 }
 
-
-.shop-card__cost-wrapper {
-	color: $dark;
-	font-size: 1.2rem;
-	margin-top: 0.5rem;
-	text-align: left;
-	p:before {
-		content: "@ ";
-		color: $brand;
-	}
-	@include breakpoint( $break-s ) {
-		text-align: right;
-	}
-}
-
-.shop-card__decrease-qty
- {
-	border: 0.1rem solid $brand;
-	border-radius: 0 0.7rem 0.7rem 0;
+.shop-card__about-me {
+	display: block;
 	color: $brand;
-	font-size: 2rem;
-	line-height: 1.2rem;
-	padding: 0.2rem 0.5rem;
-	text-align: center;
+	text-decoration: underline;
+	transition: all 0.3s;
+	margin-bottom: 1rem;
+		&:hover {
+			color: $dark;
+		}
 }
 
-.shop-card__image-wrapper {
-	margin-bottom: 0.5rem;
-	a img {
-		transition: all 0.3s;
-		&:hover {
-			transform: scale(1.01);
+.shop-card__about-detail {
+	background-color: $dark;
+	color: $white;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	p {
+		margin-bottom: 1rem;
+	}
+	h4 {
+		text-transform: uppercase;
+	}
+	ul {
+		list-style-type: none;
+		&::first-letter {
+			text-transform: uppercase;
+		}
+		li {
+			display: inline;
+			text-transform: capitalise;
+			&:after {
+				content: ", ";
+			}
+			&:last-child:after {
+				content: "."
+			}
 		}
 	}
+}
+
+.shop-card__detail-wrapper {
+	margin: 1rem;
+}
+
+.shop-card__item-cost {
+	color: $dark;
+	margin-bottom: 0.5rem;
+}
+
+.shop-card__title {
+	color: $dark;
+	font-size: 1.4rem;
+	@include breakpoint( $break-s ) {
+	}
+}
+
+
+.shop-card__qty-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	@include breakpoint( $break-s ) {
+		justify-content: end;
+		width: 100%
+	}
+}
+
+.shop-card__qty {
+	background-color: $white;
+	border: 0.1rem solid $brand;
+	border-radius: 0.5rem 0 0 0.5rem;
+	color: $dark;
+	font-size: 1rem;
+	padding: 0.2rem 0.5rem;
+	text-align: center;
 }
 
 .shop-card__increase-qty {
@@ -772,65 +778,18 @@ SHOP-CARD
 	text-align: center;
 }
 
-.shop-card__order-wrapper {
-	display: grid;
-	grid-template-columns: 1fr;
-	@include breakpoint( $break-s ) {
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 0 1rem;
-	}
-}
-
-.shop-card__qty {
+.shop-card__decrease-qty
+ {
+	background-color: $white;
 	border: 0.1rem solid $brand;
-	border-radius: 0.7rem 0 0 0.7rem;
-	color: $dark;
-	font-size: 1.2rem;
+	border-radius: 0 0.5rem 0.5rem 0;
+	color: $brand;
+	font-size: 2rem;
+	line-height: 1.2rem;
 	padding: 0.2rem 0.5rem;
 	text-align: center;
 }
 
-.shop-card__qty-wrapper {
-	margin: 0.5rem 0;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: 50%;
-	@include breakpoint( $break-s ) {
-		justify-content: end;
-		width: 100%
-	}
-}
-
-
-
-.shop-card__statistic-wrapper {
-	display: grid;
-	align-content: space-between;
-}
-
-.shop-card__text-wrapper {
-	display: grid;
-	align-content: space-between;
-}
-
-.shop-card__title {
-	color: $dark;
-	font-size: 1.3rem;
-	margin-bottom: 0.5rem;
-	@include breakpoint( $break-m ) {
-		font-size: 1.3rem;
-	}
-	@include breakpoint( $break-l ) {
-		font-size: 1.5rem;
-	}
-	a {
-		color: $dark;
-		transition: all 0.3s;
-		&:hover {
-			color: $brand;
-		}
-	}
-}
 
 
 /* ------------------------------------------

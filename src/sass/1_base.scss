@@ -5,6 +5,7 @@ COLORS
 $brand: #F1C195;
 $dark: #616161;
 $extra-light: #fcfcfc;
+$light: #f9f9f9;
 $white: #ffffff;
 
 
@@ -68,6 +69,15 @@ HELPER CLASSES
 
 .grid {
 	display: grid;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex--shop {
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 
