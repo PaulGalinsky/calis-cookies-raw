@@ -426,6 +426,27 @@ NAVIGATION
 PRODUCT-CARD
 -------------------------------------------*/
 
+
+
+/* ------------------------------------------
+
+
+USED IN NON-SHOP AREAS
+product-card
+product-card--shop-preview
+product-card__image-wrapper
+product-card__text-wrapper
+product-card__title
+
+
+SHOP ONLY
+shop-card__order-wrapper
+
+
+
+-------------------------------------------*/
+
+
 .product-card {
 	display: grid;
 }
@@ -444,28 +465,35 @@ PRODUCT-CARD
 	}
 }
 
-.product-card__cost-wrapper {
+.product-card__text {
 	color: $dark;
-	font-size: 1.2rem;
-	margin-top: 0.5rem;
-	text-align: left;
-	p:before {
-		content: "@ ";
-		color: $brand;
-	}
-	@include breakpoint( $break-s ) {
-		text-align: right;
+	font-size: 1rem;
+	margin: 0.5rem 0;
+	a {
+		color: $dark;
+		transition: all 0.3s;
+		&:hover {
+			color: $brand;
+		}
 	}
 }
 
-.product-card__decrease-qty {
-	border: 0.1rem solid $brand;
-	border-radius: 0 0.7rem 0.7rem 0;
-	color: $brand;
-	font-size: 2rem;
-	line-height: 1.2rem;
-	padding: 0.2rem 0.5rem;
-	text-align: center;
+.product-card {
+	display: grid;
+}
+
+.product-card--shop-preview {
+	grid-template-columns: 1fr 2fr;
+	gap: 2rem 2rem;
+	@include breakpoint( $break-s ) {
+		grid-template-columns: 1fr;
+		gap: 0 0;
+	}
+	@include breakpoint( $break-m ) {
+		.product-card__text {
+			display:none;
+		}
+	}
 }
 
 .product-card__image-wrapper {
@@ -478,67 +506,9 @@ PRODUCT-CARD
 	}
 }
 
-.product-card__order-wrapper {
-	display: grid;
-	grid-template-columns: 1fr;
-
-	@include breakpoint( $break-s ) {
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 0 1rem;
-	}
-}
-
-.product-card__qty {
-	border: 0.1rem solid $brand;
-	border-radius: 0.7rem 0 0 0.7rem;
-	color: $dark;
-	font-size: 1.2rem;
-	padding: 0.2rem 0.5rem;
-	text-align: center;
-}
-
-.product-card__qty-wrapper {
-	margin: 0.5rem 0;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: 50%;
-	@include breakpoint( $break-s ) {
-		justify-content: end;
-		width: 100%
-	}
-}
-
-.product-card__increase-qty {
-	background-color: $brand;
-	border: 0.1rem solid $brand;
-	color: $white;
-	font-size: 2rem;
-	line-height: 1.2rem;
-	padding: 0.2rem 0.5rem;
-	text-align: center;
-}
-
 .product-card__text-wrapper {
 	display: grid;
 	align-content: space-between;
-}
-
-.product-card__statistic-wrapper {
-	display: grid;
-	align-content: space-between;
-}
-
-.product-card__text {
-	color: $dark;
-	font-size: 1rem;
-	margin: 0.5rem 0;
-	a {
-		color: $dark;
-		transition: all 0.3s;
-		&:hover {
-			color: $brand;
-		}
-	}
 }
 
 .product-card__title {
@@ -559,6 +529,7 @@ PRODUCT-CARD
 		}
 	}
 }
+
 
 /* ------------------------------------------
 PRODUCT-GRID
@@ -716,6 +687,127 @@ SECTION-PRIMARY
 .section-primary--search {
 	padding: 4rem 0 0rem;
 	margin-bottom:  -2rem;
+}
+
+
+/* ------------------------------------------
+SHOP-CARD
+-------------------------------------------*/
+
+.shop-card {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 2rem 2rem;
+	@include breakpoint( $break-s ) {
+		grid-template-columns: 1fr;
+		gap: 0 0;
+	}
+}
+
+
+.shop-card__cost-wrapper {
+	color: $dark;
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+	text-align: left;
+	p:before {
+		content: "@ ";
+		color: $brand;
+	}
+	@include breakpoint( $break-s ) {
+		text-align: right;
+	}
+}
+
+.shop-card__decrease-qty
+ {
+	border: 0.1rem solid $brand;
+	border-radius: 0 0.7rem 0.7rem 0;
+	color: $brand;
+	font-size: 2rem;
+	line-height: 1.2rem;
+	padding: 0.2rem 0.5rem;
+	text-align: center;
+}
+
+.shop-card__image-wrapper {
+	margin-bottom: 0.5rem;
+	a img {
+		transition: all 0.3s;
+		&:hover {
+			transform: scale(1.01);
+		}
+	}
+}
+
+.shop-card__increase-qty {
+	background-color: $brand;
+	border: 0.1rem solid $brand;
+	color: $white;
+	font-size: 2rem;
+	line-height: 1.2rem;
+	padding: 0.2rem 0.5rem;
+	text-align: center;
+}
+
+.shop-card__order-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	@include breakpoint( $break-s ) {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0 1rem;
+	}
+}
+
+.shop-card__qty {
+	border: 0.1rem solid $brand;
+	border-radius: 0.7rem 0 0 0.7rem;
+	color: $dark;
+	font-size: 1.2rem;
+	padding: 0.2rem 0.5rem;
+	text-align: center;
+}
+
+.shop-card__qty-wrapper {
+	margin: 0.5rem 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 50%;
+	@include breakpoint( $break-s ) {
+		justify-content: end;
+		width: 100%
+	}
+}
+
+
+
+.shop-card__statistic-wrapper {
+	display: grid;
+	align-content: space-between;
+}
+
+.shop-card__text-wrapper {
+	display: grid;
+	align-content: space-between;
+}
+
+.shop-card__title {
+	color: $dark;
+	font-size: 1.3rem;
+	margin-bottom: 0.5rem;
+	@include breakpoint( $break-m ) {
+		font-size: 1.3rem;
+	}
+	@include breakpoint( $break-l ) {
+		font-size: 1.5rem;
+	}
+	a {
+		color: $dark;
+		transition: all 0.3s;
+		&:hover {
+			color: $brand;
+		}
+	}
 }
 
 
