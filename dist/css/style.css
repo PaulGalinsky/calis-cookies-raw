@@ -593,14 +593,31 @@ SECTION-PRIMARY
 /* ------------------------------------------
 SHOP-CARD
 -------------------------------------------*/
+.shop-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
 .shop-card {
+  flex: 0 1 100%;
+  margin-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem 2rem; }
   @media only screen and (min-width: 600px) {
     .shop-card {
+      flex: 0 1 calc(50% - 1.5rem);
+      margin-bottom: 4rem;
       grid-template-columns: 1fr;
       gap: 0 0; } }
+  @media only screen and (min-width: 900px) {
+    .shop-card {
+      flex: 0 1 calc(33.3% - 1.5rem);
+      margin-bottom: 5rem; } }
+  @media only screen and (min-width: 900px) {
+    .shop-card {
+      flex: 0 1 calc(33.3% - 2rem);
+      margin-bottom: 5rem; } }
 
 .shop-card__cost-wrapper {
   color: #616161;
